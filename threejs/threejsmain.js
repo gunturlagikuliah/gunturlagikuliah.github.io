@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const material = new THREE.MeshBasicMaterial({color: "#0000FF"});
     const cube = new THREE.Mesh(geometry, material);
 
+    console.log(cube.isObject3D);
+
     scene.add(cube);
     cube.postion.set(1,1,5);
     cube.rotation.set(0, Math.pi/4, 0);
