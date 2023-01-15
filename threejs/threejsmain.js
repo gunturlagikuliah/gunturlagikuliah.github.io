@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(cube.isObject3D);
 
     scene.add(cube);
-    cube.postion.set(1,1,5);
+    cube.position.set(1,1,5);
     cube.rotation.set(0, Math.pi/4, 0);
-    
+
     const camera = new THREE.PerspectiveCamera();
-    camera.postion.set(1, 1, 5);
+    camera.position.set(1, 1, 5);
     
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(500, 500);
