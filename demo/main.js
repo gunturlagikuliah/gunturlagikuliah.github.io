@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const plane = new THREE.Mesh(geometry, material);
         const anchor = mindarThree.addAnchor(0);
         anchor.group.add(plane); // Ini hirarki grup 3js
-        mindarThree.start()
-        renderer.setAnimaitionLoop(()=>{
-            renderer.render(camera,scene);
+        await mindarThree.start()
+        renderer.setAnimationLoop(()=>{
+            renderer.render(scene,camera);
         });
     }
     start();
