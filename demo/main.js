@@ -4,7 +4,7 @@ import { mockWithVideo} from './camera-mock.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () =>{
-        mockWithVideo('./testvideo.mp4');
+        //mockWithVideo('./testvideo.mp4');
         const mindarThree = new MindARThree({
             container: document.body,
             imageTargetSrc: './marker/targets.mind',
