@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contoh Overlay</title>
+	<style>
+		/* Gaya untuk elemen overlay */
+		#overlay {
+			position: fixed; /* Menempatkan elemen di atas konten halaman web */
+			display: none; /* Menyembunyikan elemen secara default */
+			width: 100%; /* Lebar penuh (menutupi seluruh halaman) */
+			height: 100%; /* Tinggi penuh (menutupi seluruh halaman) */
+			top: 0; /* Menempatkan elemen di bagian atas halaman */
+			left: 0; /* Menempatkan elemen di bagian kiri halaman */
+			right: 0; /* Menempatkan elemen di bagian kanan halaman */
+			bottom: 0; /* Menempatkan elemen di bagian bawah halaman */
+			background-color: rgba(0,0,0,0.5); /* Warna latar belakang dengan transparansi 50% */
+			z-index: 2; /* Menempatkan elemen di atas konten halaman web lainnya */
+		}
+
+		/* Gaya untuk teks pada overlay */
+		#overlay p {
+			color: white; /* Warna teks putih */
+			font-size: 24px; /* Ukuran font 24px */
+			text-align: center; /* Teks rata tengah */
+			margin-top: 20%; /* Jarak antara teks dan bagian atas halaman */
+		}
+
+        /* Gaya untuk tombol tutup overlay */
+        #close-button {
+            position: absolute; /* Menempatkan tombol di atas elemen overlay */
+            top: 20px; /* Jarak antara tombol dan bagian atas halaman */
+            right: 20px; /* Jarak antara tombol dan bagian kanan halaman */
+            font-size: 24px; /* Ukuran font 24px */
+            color: white; /* Warna teks putih */
+            background-color: transparent; /* Warna latar belakang transparan */
+            border: none; /* Tidak ada border pada tombol */
+            cursor: pointer; /* Mengubah kursor saat diarahkan ke tombol */
+        }
+	</style>
+</head>
+<body>
+	<!-- Tombol untuk menampilkan overlay -->
+	<button onclick="document.getElementById('overlay').style.display='block'">Baca Cerita</button>
+
+	<!-- Elemen overlay -->
+	<div id="overlay">
+        <!-- Tombol tutup overlay -->
+        <button id="close-button" onclick="document.getElementById('overlay').style.display='none'">X</button>
+
+		<p>Ini adalah cerita pendek yang menarik!</p>
+	</div>
+
+</body>
+</html>

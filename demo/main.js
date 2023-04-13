@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { MindARThree } from 'mindar-image-three';
-import { mockWithVideo} from './camera-mock.js';
+//import { mockWithVideo} from './camera-mock.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () =>{
@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const mindarThree = new MindARThree({
             container: document.body,
             imageTargetSrc: './marker/targets.mind',
+            maxTrack: 1,
+            filterMinCF: 0.0001,
+            filterBeta: 0.001,
           })
         const {renderer, scene, camera} = mindarThree;
         const geometry = new THREE.PlaneGeometry(1,1);

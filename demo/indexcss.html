@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+		<script type="importmap">
+		{
+			"imports": {
+				"three": "https://unpkg.com/three@0.147.0/build/three.module.js",
+				"three/addons/": "https://unpkg.com/three@0.147.0/examples/jsm/",
+				"mindar-image-three":"https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-three.prod.js"
+			}
+		}
+		</script>
+    <script src="./maincss.js" type="module"></script>
+    <style>
+      html.body {
+        position: relative;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      #ar {
+        width: 5000px;
+        height: 1000px;
+        visibility: hidden;
+      }
+      * {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column {
+  float: left;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Style the image */
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Style the buttons */
+.btn {
+  border-radius: 12px;
+  background-color: #f2f2f2;
+  color: black;
+  padding: 14px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Style the text */
+.text {
+    width:100%;
+    height:auto;
+    background-color:#f2f2f2;
+    border-radius:12px;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:center
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="ar">
+      <div class="row">
+        <div class="column">
+        <img src="https://www.w3schools.com/w3images/mountains.jpg" alt="Mountains" class="img">
+        </div>
+        </div>
+        
+        <div class="row">
+        <div class="column" style="text-align:center;">
+        <a href="https://www.google.com" class="btn">Button1</a>
+        <a href="#" class="btn">Button2</a>
+        <a href="#" class="btn">Button3</a>
+        <a href="#" class="btn">Button4</a>
+        <a href="#" class="btn">Button5</a>
+        </div>
+        </div>
+        
+        <div class="row">
+        <div class="column">
+        <p class="text">Ini adalah tempat teks.</p>
+        </div>
+        </div>
+    </div>
+  </body>
+</html>
