@@ -32,11 +32,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
         //CSS 3d Objek
         const obj = new CSS3DObject(document.querySelector("#ar"));
+        obj.scale.set(5,5,5);
+        obj.position.set(0,-1500,0);
         const cssAnchor = mindarThree.addCSSAnchor(0);
         cssAnchor.group.add(obj);
 
         anchor2.group.add(plane2);
 
+        cssAnchor.onTargetFound = () =>{
+            console.log("CSS TARGET FOUND");
+        }
+        cssAnchor.onTargetLost = () =>{
+            console.log("CSS TARGET LOST");
+        }
+
+        anchor2.onTargetFound = () =>{
+            console.log("TARGET 2 FOUND");
+        }
+        anchor2.onTargetLost = () =>{
+            console.log("TARGET 2 LOST");
+        }
 
         await mindarThree.start()
         renderer.setAnimationLoop(()=>{
