@@ -1,11 +1,33 @@
 import * as THREE from 'three';
 import { MindARThree } from 'mindar-image-three';
-import { mockWithVideo} from './camera-mock.js';
+//import { mockWithVideo} from './camera-mock.js';
 import {CSS3DObject} from 'three/addons/renderers/CSS3DRenderer.js';
+
+const createYoutube = () => {
+    return new Promise((resolve, reject) => {
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  
+      const onYouTubeIframeAPIReady = () => {
+        const player = new YT.Player('player', {
+      videoId: 'hLK41oLH8kw',
+      events: {
+        onReady: () => {
+          resolve(player);
+        }
+      }
+        });
+      }
+      window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
+    });
+  }
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () =>{
-        mockWithVideo('./testvideo.mp4');
+        const player = await createYoutube();
+        //mockWithVideo('./testvideo.mp4');
         const mindarThree = new MindARThree({
             container: document.body,
             imageTargetSrc: './marker/targets.mind',
@@ -39,11 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         anchor2.group.add(plane2);
 
+        var vidyt = document.getElementById("ytv");
         cssAnchor.onTargetFound = () =>{
             console.log("CSS TARGET FOUND");
+            player.playVideo();
         }
         cssAnchor.onTargetLost = () =>{
             console.log("CSS TARGET LOST");
+            //document.getElementById("ytvideo").contentWindow.player.pause();
+            player.pauseVideo();
         }
 
         anchor2.onTargetFound = () =>{
