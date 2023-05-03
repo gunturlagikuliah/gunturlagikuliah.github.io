@@ -8,13 +8,13 @@ export const mockWithVideo = (path) => {
 	startButton.innerHTML = "start";
 	startButton.style.position = 'fixed';
 	startButton.style.zIndex = 10000;
-	document.body.appendChild(startButton);
-  //document.querySelector("#container").appendChild(startButton);
+	//document.body.appendChild(startButton);
+  document.querySelector("#container").appendChild(startButton);
 
 	startButton.addEventListener('click', () => {
 	  const stream = video.captureStream();
 	  video.play();
-	  document.body.removeChild(startButton);
+	  document.querySelector("#container").removeChild(startButton);
 	  resolve(stream);
 	});
       };

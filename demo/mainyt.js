@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { MindARThree } from 'mindar-image-three';
-//import { mockWithVideo} from './camera-mock.js';
+import { mockWithVideo} from './camera-mock.js';
 import {CSS3DObject} from 'three/addons/renderers/CSS3DRenderer.js';
 
 const createYoutube = () => {
@@ -13,6 +13,7 @@ const createYoutube = () => {
       const onYouTubeIframeAPIReady = () => {
         const player = new YT.Player('player', {
       videoId: 'hLK41oLH8kw',
+      playerVars: { 'controls': 0 },
       events: {
         onReady: () => {
           resolve(player);
@@ -27,7 +28,7 @@ const createYoutube = () => {
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () =>{
         const player = await createYoutube();
-        //mockWithVideo('./testvideo.mp4');
+        mockWithVideo('./testvideo.mp4');
         const mindarThree = new MindARThree({
             container: document.body,
             imageTargetSrc: './marker/targets.mind',
