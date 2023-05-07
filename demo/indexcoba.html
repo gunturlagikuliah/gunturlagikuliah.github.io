@@ -11,7 +11,7 @@
 				"three/addons/": "https://unpkg.com/three@0.147.0/examples/jsm/",
 				"mindar-image-three":"https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-three.prod.js"
 			}
-		}
+		} 
 		</script>
     <style>
         html,
@@ -24,7 +24,10 @@
             overflow: hidden;
         }
 
-        #navigasiatas {
+        #navigasiatas,
+        #tengah,
+        #calonkiri,
+        #calonkanan {
             width: 1000px;
             height: 1000px;
             visibility: hidden;
@@ -37,31 +40,36 @@
     <div id="container">
     </div>
     <div id="calonkiri">
+        <div class="grid">
+            <div>
+                <article class="container-fluid" style="text-align: center; font-size: 80px;"><b>Mamah Nomria Satu <img src="./resources/calon1kiri.png"></b>
+                </article>
+            </div>
+            <div> 
+            </div>
+        </div>
+
     </div>
     <div id="calonkanan">
     </div>
     <div id="navigasiatas">
+        <main class="container-fluid">
+            <a href="ub.ac.id">
+                <article class="container-fluid" style="text-align: center; font-size: 100px;"><b>WEB: ub.ac.id</b>
+                </article>
+            </a>
+        </main>
         <a id="isinavigasiatas">NAVIGASI ATAS NIH YAAA</a>
-        <svg width="54.999996mm" height="85mm" viewBox="0 0 207.874 321.25986" version="1.1" id="svg5"
-            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-            xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg"
-            xmlns:svg="http://www.w3.org/2000/svg">
-            <sodipodi:namedview id="namedview7" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0"
-                inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0"
-                inkscape:deskcolor="#d1d1d1" inkscape:document-units="mm" showgrid="false" />
-            <defs id="defs2" />
-            <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1">
-                <rect style="fill:#d45500;stroke-width:8.54173" id="rect234" width="207.87401" height="69.291336" x="0"
-                    y="203.81001" />
-                <circle style="fill:#d45500;stroke-width:8.54173" id="path340" cx="104.39986" cy="82.521942"
-                    r="56.421978" />
-            </g>
-        </svg>
-
     </div>
     <div id="navigasibawah">
     </div>
     <div id="tengah">
+        <!-- Image plus center -->
+        <img src="./resources/pasangan1.jpg" alt="postercalon"
+            style="display: block;margin-left: auto;margin-right: auto; margin-top: 25; margin-bottom: auto;">
+        <!-- <main class="container-fluid">
+            <img class="container-fluid" src="./resources/pasangan1.jpg">
+        </main> -->
     </div>
 </body>
 <script src="./maincoba.js" type="module"></script>
