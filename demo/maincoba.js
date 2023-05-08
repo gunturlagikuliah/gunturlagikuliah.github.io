@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         //CALON KIRI----
         const calonKiri = new CSS3DObject(document.querySelector("#calonkiri"));
+        calonKiri.position.set(-1000,450,0)
 
         //CALON KANAN---
 
