@@ -42,10 +42,71 @@
     <div id="calonkiri">
         <div class="container-fluid">
             <div>
-                <article class="container-fluid" style="text-align: center; font-size: 80px;"><b>Mamah Nomria Satu <img src="./resources/calon1kiri.png"></b>
+                <article class="container-fluid" style="text-align: center; font-size: 80px;"><b>Mamah Nomria Satu <img
+                            src="./resources/calon1kiri.png"></b>
                 </article>
             </div>
-            <div> 
+            <div>
+            </div>
+            <div>
+                <article class="container-fluid" style="text-align: center; font-size: 50px;">
+                    <div id="halaman1" style="display:block">
+                        <img src="./resources/partai1.png" alt="Gambar" class="container-fluid">
+                    </div>
+
+
+
+                    <div id="halaman2" style="display:none; height: 550px; overflow-y: scroll;">
+                        <table  style="font-size: 60px;">
+                            <tr>
+                              <td>Nama lengkap</td>
+                              <td>Mamah Nomria Satu</td>
+                            </tr>
+                            <tr>
+                              <td>Tempat tanggal lahir</td>
+                              <td>Jakarta, 1 Januari 1970</td>
+                            </tr>
+                            <tr>
+                              <td>Jenis kelamin</td>
+                              <td>Perempuan</td>
+                            </tr>
+                            <tr>
+                              <td>Agama</td>
+                              <td>Islam</td>
+                            </tr>
+                            <tr>
+                              <td>Pendidikan terakhir</td>
+                              <td>S1 Hukum Universitas Indonesia</td>
+                            </tr>
+                            <tr>
+                              <td>Pekerjaan terakhir</td>
+                              <td>Pengacara di sebuah firma hukum ternama di Jakarta</td>
+                            </tr>
+                            <tr>
+                              <td>Pengalaman politik</td>
+                              <td>Tidak ada</td>
+                            </tr>
+                            <tr>
+                              <td>Riwayat organisasi</td>
+                              <td>Tidak ada</td>
+                            </tr>
+                            <tr>
+                              <td>Riwayat kriminal</td>
+                              <td>Tidak ada</td>
+                            </tr>  
+                          </table>
+                    </div>
+                </article>
+            </div>
+            <div>
+                <article class="container-fluid">
+                    <nav class="container-fluid">
+                        <ul>
+                            <li><a href="#" onclick="document.getElementById('halaman2').style.display='none';document.getElementById('halaman1').style.display='block';" role="button" style="font-size: 80px;">Partai</a></li>
+                            <li><a href="#" onclick="document.getElementById('halaman1').style.display='none';document.getElementById('halaman2').style.display='block';"role="button" style="font-size: 80px;">Biodata</a></li>
+                        </ul>
+                    </nav>
+                </article>
             </div>
         </div>
 
@@ -55,13 +116,18 @@
     <div id="navigasiatas">
         <main class="container-fluid">
             <a href="ub.ac.id">
-                <article class="container-fluid" style="text-align: center; font-size: 100px;"><b>WEB: ub.ac.id</b>
+                <article class="container-fluid" style="text-align: center; font-size: 100px;"><b>WEB CALON 1</b>
                 </article>
             </a>
         </main>
         <a id="isinavigasiatas">NAVIGASI ATAS NIH YAAA</a>
     </div>
     <div id="navigasibawah">
+        <article class="container-fluid" style="width: 1920px;">
+            <div class="container-fluid" id="player"></div>
+            <button onclick="player.stop()" style="font-size: 80px">Play</button>
+            <button onclick="player.start()" style="font-size: 80px" >Pause</button>
+        </article>
     </div>
     <div id="tengah">
         <!-- Image plus center -->

@@ -3,8 +3,35 @@ import { MindARThree } from 'mindar-image-three';
 import { mockWithVideo } from './container-mock.js';
 import { CSS3DObject } from 'three/addons/renderers/CSS3DRenderer.js';
 
+//Method untuk player youtube
+const createYoutube = () => {
+    return new Promise((resolve, reject) => {
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  
+      const onYouTubeIframeAPIReady = () => {
+        const player = new YT.Player('player', {
+      videoId: '',
+      height: '1080',
+      width: '1920',
+      playerVars: { 'controls': 0 },
+      events: {
+        onReady: () => {
+          resolve(player);
+        }
+      }
+        });
+      }
+      window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
+    });
+  }
+
+//Main Program
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
+        const player = await createYoutube();
         mockWithVideo('./calon1.mp4');
 
         //Deklarasi objek mind AR di tempat container, marker targets.mind, dan ketentuan setting
@@ -36,6 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         
         //NAVIGASI BAWAH----
+        const bawah = new CSS3DObject(document.querySelector("#navigasibawah"));
+        //bawah.position.set(0,-1600,0)
 
         //CALON KIRI----
         const calonKiri = new CSS3DObject(document.querySelector("#calonkiri"));
@@ -51,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             anchorMarker1.group.add(navigasiatas);
             anchorMarker1.group.add(tengah);
             anchorMarker1.group.add(calonKiri);
+            anchorMarker1.group.add(bawah)
 
         }
         anchorMarker1.onTargetLost = () => {
