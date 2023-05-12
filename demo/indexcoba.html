@@ -32,15 +32,20 @@
             height: 1000px;
             visibility: hidden;
         }
+
+        #navigasibawah {
+            height: 1000px;
+        }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
     <div id="container">
     </div>
     <div id="calonkiri">
-        <div class="container-fluid">
+        <div class="container-fluid  animate__animated animate__fadeInLeft">
             <div>
                 <article class="container-fluid" style="text-align: center; font-size: 80px;"><b>Mamah Nomria Satu <img
                             src="./resources/calon1kiri.png"></b>
@@ -57,44 +62,44 @@
 
 
                     <div id="halaman2" style="display:none; height: 550px; overflow-y: scroll;">
-                        <table  style="font-size: 60px;">
+                        <table style="font-size: 60px;">
                             <tr>
-                              <td>Nama lengkap</td>
-                              <td>Mamah Nomria Satu</td>
+                                <td>Nama lengkap</td>
+                                <td>Mamah Nomria Satu</td>
                             </tr>
                             <tr>
-                              <td>Tempat tanggal lahir</td>
-                              <td>Jakarta, 1 Januari 1970</td>
+                                <td>Tempat tanggal lahir</td>
+                                <td>Jakarta, 1 Januari 1970</td>
                             </tr>
                             <tr>
-                              <td>Jenis kelamin</td>
-                              <td>Perempuan</td>
+                                <td>Jenis kelamin</td>
+                                <td>Perempuan</td>
                             </tr>
                             <tr>
-                              <td>Agama</td>
-                              <td>Islam</td>
+                                <td>Agama</td>
+                                <td>Islam</td>
                             </tr>
                             <tr>
-                              <td>Pendidikan terakhir</td>
-                              <td>S1 Hukum Universitas Indonesia</td>
+                                <td>Pendidikan terakhir</td>
+                                <td>S1 Hukum Universitas Indonesia</td>
                             </tr>
                             <tr>
-                              <td>Pekerjaan terakhir</td>
-                              <td>Pengacara di sebuah firma hukum ternama di Jakarta</td>
+                                <td>Pekerjaan terakhir</td>
+                                <td>Pengacara di sebuah firma hukum ternama di Jakarta</td>
                             </tr>
                             <tr>
-                              <td>Pengalaman politik</td>
-                              <td>Tidak ada</td>
+                                <td>Pengalaman politik</td>
+                                <td>Tidak ada</td>
                             </tr>
                             <tr>
-                              <td>Riwayat organisasi</td>
-                              <td>Tidak ada</td>
+                                <td>Riwayat organisasi</td>
+                                <td>Tidak ada</td>
                             </tr>
                             <tr>
-                              <td>Riwayat kriminal</td>
-                              <td>Tidak ada</td>
-                            </tr>  
-                          </table>
+                                <td>Riwayat kriminal</td>
+                                <td>Tidak ada</td>
+                            </tr>
+                        </table>
                     </div>
                 </article>
             </div>
@@ -102,8 +107,12 @@
                 <article class="container-fluid">
                     <nav class="container-fluid">
                         <ul>
-                            <li><a href="#" onclick="document.getElementById('halaman2').style.display='none';document.getElementById('halaman1').style.display='block';" role="button" style="font-size: 80px;">Partai</a></li>
-                            <li><a href="#" onclick="document.getElementById('halaman1').style.display='none';document.getElementById('halaman2').style.display='block';"role="button" style="font-size: 80px;">Biodata</a></li>
+                            <li><a href="#"
+                                    onclick="document.getElementById('halaman2').style.display='none';document.getElementById('halaman1').style.display='block';"
+                                    role="button" style="font-size: 80px;">Partai</a></li>
+                            <li><a href="#"
+                                    onclick="document.getElementById('halaman1').style.display='none';document.getElementById('halaman2').style.display='block';"
+                                    role="button" style="font-size: 80px;">Biodata</a></li>
                         </ul>
                     </nav>
                 </article>
@@ -114,20 +123,60 @@
     <div id="calonkanan">
     </div>
     <div id="navigasiatas">
-        <main class="container-fluid">
+        <main class="container-fluid animate__animated animate__fadeInDown">
             <a href="ub.ac.id">
-                <article class="container-fluid" style="text-align: center; font-size: 100px;"><b>WEB CALON 1</b>
+                <article class="container-fluid" style="text-align: center; font-size: 100px;">
+                    <b>WEB UB.AC.ID</b>
                 </article>
             </a>
         </main>
         <a id="isinavigasiatas">NAVIGASI ATAS NIH YAAA</a>
     </div>
     <div id="navigasibawah">
-        <article class="container-fluid" style="width: 1920px;">
-            <div class="container-fluid" id="player"></div>
-            <button onclick="player.stop()" style="font-size: 80px">Play</button>
-            <button onclick="player.start()" style="font-size: 80px" >Pause</button>
-        </article>
+        <div id="animasibawah"class=" animate__animated animate__fadeInUp">
+            <article>
+                <nav class="container-fluid">
+                    <ul>
+                        <li><a href="#" onclick="
+                                    document.getElementById('visimisi').style.display='none';
+                                    document.getElementById('player').style.display='block';
+                                    document.getElementById('tombolvideo').style.display='block';" role="button"
+                                style="font-size: 80px;">Video</a></li>
+                        <li><a href="#" onclick="
+                                    document.getElementById('player').style.display='none';
+                                    document.getElementById('tombolvideo').style.display='none';
+                                    document.getElementById('visimisi').style.display='block';" role="button"
+                                style="font-size: 80px;">Visi & Misi</a></li>
+                    </ul>
+                </nav>
+            </article>
+            <article class="container-fluid" style="width: 1920px;">
+                <div class="container-fluid" id="player" style="display: block;"></div>
+                <div class="container-fluid" id="visimisi" style="display: none;">
+                    <div class="container-fluid" style="text-align: center; font-size: 70px;">
+                        Visi: <br>
+                        Mewujudkan kota Utopia yang sejahtera, mandiri, dan berdaya saing tinggi dengan mengoptimalkan
+                        potensi sumber daya alam dan manusia yang ada.<br><br>
+                        Misi:<br>
+                        <ol style="font-size: 70px;">
+                            <li>Meningkatkan kualitas pendidikan dan pelatihan sumber daya manusia yang berkualitas dan
+                                berdaya saing tinggi.</li>
+                            <li>Meningkatkan kualitas infrastruktur yang mendukung pertumbuhan ekonomi dan kesejahteraan
+                                masyarakat.</li>
+                            <li>Meningkatkan pelayanan publik yang berkualitas dan terjangkau bagi masyarakat.</li>
+                            <li>Meningkatkan kualitas lingkungan hidup yang sehat dan lestari.</li>
+                            <li>Meningkatkan partisipasi masyarakat dalam pembangunan daerah.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="tombolvideo">
+                    <button onclick="player.startVideo()" style="font-size: 80px">Play</button>
+                    <button onclick="player.pauseVideo()" style="font-size: 80px">Pause</button>
+                </div>
+
+            </article>
+        </div>
+
     </div>
     <div id="tengah">
         <!-- Image plus center -->

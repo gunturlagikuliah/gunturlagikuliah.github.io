@@ -32,7 +32,7 @@ const createYoutube = () => {
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
         const player = await createYoutube();
-        mockWithVideo('./calon1.mp4');
+        // mockWithVideo('./static3.mp4');
 
         //Deklarasi objek mind AR di tempat container, marker targets.mind, dan ketentuan setting
         const mindarThree = new MindARThree({
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         //NAVIGASI BAWAH----
         const bawah = new CSS3DObject(document.querySelector("#navigasibawah"));
-        //bawah.position.set(0,-1600,0)
+        bawah.position.set(0,-1300,0)
 
         //CALON KIRI----
         const calonKiri = new CSS3DObject(document.querySelector("#calonkiri"));
@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
         anchorMarker1.onTargetLost = () => {
+          // document.querySelector('#animasibawah').classList.add('animate__fadeOutDown');
             console.log("CSS TARGET LOST");
         }
 
