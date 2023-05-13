@@ -32,7 +32,7 @@ const createYoutube = () => {
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
         const player = await createYoutube();
-        // mockWithVideo('./static3.mp4');
+        // mockWithVideo('./calon1.mp4');
 
         //Deklarasi objek mind AR di tempat container, marker targets.mind, dan ketentuan setting
         const mindarThree = new MindARThree({
@@ -45,7 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         //Deklarasi renderer dan scene untuk mindar
+        
         const { renderer, cssRenderer, scene, cssScene, camera } = mindarThree;
+        console.log(cssRenderer.getSize());
+        // cssRenderer.setSize(1000,1000);
+        console.log(cssRenderer.getSize());
 
         // LOKASI DAN NAVIGASI ATAS----
         const navigasiatas = new CSS3DObject(document.querySelector("#navigasiatas"));  //Membuat CCS 3D OBJECT dalam html dengan id
@@ -64,11 +68,11 @@ document.addEventListener('DOMContentLoaded', () => {
         
         //NAVIGASI BAWAH----
         const bawah = new CSS3DObject(document.querySelector("#navigasibawah"));
-        bawah.position.set(0,-1300,0)
+        bawah.position.set(0,-1300,0);
 
         //CALON KIRI----
         const calonKiri = new CSS3DObject(document.querySelector("#calonkiri"));
-        calonKiri.position.set(-1000,450,0)
+        calonKiri.position.set(-1000,450,0);
 
         //CALON KANAN---
 
@@ -81,6 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
             anchorMarker1.group.add(tengah);
             anchorMarker1.group.add(calonKiri);
             anchorMarker1.group.add(bawah)
+            // cssRenderer.setSize(1000,1000);
+            console.log(cssRenderer.getSize());
+
 
         }
         anchorMarker1.onTargetLost = () => {
@@ -108,6 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cssRenderer.render(cssScene, camera);
             renderer.render(scene, camera);
         });
+        
 
     }
     start();
