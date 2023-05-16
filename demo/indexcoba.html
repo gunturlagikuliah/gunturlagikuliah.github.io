@@ -40,6 +40,27 @@
             height: 1000px;
 
         }
+        		/* Gaya untuk elemen overlay */
+		#kontenoverlay {
+			position: fixed; /* Menempatkan elemen di atas konten halaman web */
+			display: none; /* Menyembunyikan elemen secara default */
+			width: 100%; /* Lebar penuh (menutupi seluruh halaman) */
+			height: 100%; /* Tinggi penuh (menutupi seluruh halaman) */
+			top: 0; /* Menempatkan elemen di bagian atas halaman */
+			left: 0; /* Menempatkan elemen di bagian kiri halaman */
+			right: 0; /* Menempatkan elemen di bagian kanan halaman */
+			bottom: 0; /* Menempatkan elemen di bagian bawah halaman */
+			background-color: rgba(0,0,0,0.5); /* Warna latar belakang dengan transparansi 50% */
+			z-index: 2; /* Menempatkan elemen di atas konten halaman web lainnya */
+		}
+
+		/* Gaya untuk teks pada overlay */
+		#kontenoverlay p {
+			color: white; /* Warna teks putih */
+			font-size: 24px; /* Ukuran font 24px */
+			text-align: center; /* Teks rata tengah */
+			margin-top: 20%; /* Jarak antara teks dan bagian atas halaman */
+		}
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -262,6 +283,9 @@
         <!-- <main class="container-fluid">
             <img class="container-fluid" src="./resources/pasangan1.jpg">
         </main> -->
+    </div>
+    <div id="kontenoverlay">
+        <p>Ini adalah cerita pendek yang menarik!</p>
     </div>
 </body>
 <script src="./maincoba.js" type="module"></script>

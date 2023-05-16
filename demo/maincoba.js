@@ -62,7 +62,7 @@ document.getElementById("tombolpause").addEventListener("click", function(){
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
         const player = await createYoutube();
-        //  mockWithVideo('./calon1.mp4');
+        //  mockWithVideo('./calon2.mp4');
 
         //Deklarasi objek mind AR di tempat container, marker targets.mind, dan ketentuan setting
         const mindarThree = new MindARThree({
@@ -144,10 +144,13 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("CSS 2 TARGET FOUND");
             document.querySelector('#isinavigasiatas').innerHTML = "SASUKE";
             anchorMarker2.group.add(navigasiatas);
+            document.getElementById('kontenoverlay').style.display='block';
 
         }
         anchorMarker2.onTargetLost = () => {
+          document.getElementById('kontenoverlay').style.display='none';
             console.log("CSS 2 TARGET LOST");
+            
         }
 
 
