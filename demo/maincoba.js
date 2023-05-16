@@ -28,11 +28,41 @@ const createYoutube = () => {
     });
   }
 
+  function onPlayerReady(event) {
+    // Add a custom play/pause button
+    var playButton = document.getElementById("play-button");
+    playButton.addEventListener("click", function() {
+        if (player.getPlayerState() == YT.PlayerState.PLAYING) {
+            player.pauseVideo();
+            playButton.innerHTML = "Play";
+        } else {
+            player.playVideo();
+            playButton.innerHTML = "Pause";
+        }
+    });
+}
+
+function playyt(){
+  document.getElementById('player').contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+}
+
+function pauseyt(){
+  document.getElementById('player').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+}
+  
+document.getElementById("tombolplay").addEventListener("click", function(){
+	document.getElementById('player').contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+  console.log('tombol play');
+});
+
+document.getElementById("tombolpause").addEventListener("click", function(){
+  document.getElementById('player').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+});
 //Main Program
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
         const player = await createYoutube();
-        // mockWithVideo('./calon1.mp4');
+        //  mockWithVideo('./calon1.mp4');
 
         //Deklarasi objek mind AR di tempat container, marker targets.mind, dan ketentuan setting
         const mindarThree = new MindARThree({
@@ -68,13 +98,15 @@ document.addEventListener('DOMContentLoaded', () => {
         
         //NAVIGASI BAWAH----
         const bawah = new CSS3DObject(document.querySelector("#navigasibawah"));
-        bawah.position.set(0,-1300,0);
+         bawah.position.set(0,-1300,0);
 
         //CALON KIRI----
         const calonKiri = new CSS3DObject(document.querySelector("#calonkiri"));
         calonKiri.position.set(-1000,450,0);
 
         //CALON KANAN---
+        const calonKanan = new CSS3DObject(document.querySelector("#calonkanan"));
+        calonKanan.position.set(1000,450,0);
 
         //Debug target found
         //Anchor 1
@@ -84,9 +116,21 @@ document.addEventListener('DOMContentLoaded', () => {
             anchorMarker1.group.add(navigasiatas);
             anchorMarker1.group.add(tengah);
             anchorMarker1.group.add(calonKiri);
+            anchorMarker1.group.add(calonKanan);
             anchorMarker1.group.add(bawah)
             // cssRenderer.setSize(1000,1000);
-            console.log(cssRenderer.getSize());
+            //player.cueVideoById('BUSfBdyF0QE');
+            console.log(player.getVideoUrl());
+            // player.cueVideoById('-n84EMKIXQM');
+            setTimeout(() => {
+              player.cueVideoById('-n84EMKIXQM');
+              console.log("test");
+              console.log(player.getVideoUrl());
+            }, 2000);
+            // console.log(cssRenderer.getSize());
+            // setTimeout(() => {
+            //   player.playVideo();
+            // }, 4000);
 
 
         }
