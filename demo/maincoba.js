@@ -62,7 +62,7 @@ document.getElementById("tombolpause").addEventListener("click", function(){
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
         const player = await createYoutube();
-         //mockWithVideo('./static3.mp4');
+         mockWithVideo('./calon1.mp4');
 
         //Deklarasi objek mind AR di tempat container, marker targets.mind, dan ketentuan setting
         const mindarThree = new MindARThree({
