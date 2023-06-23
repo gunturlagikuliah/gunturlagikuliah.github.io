@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //mockWithVideo('./video/calon1.mp4');
         //Deklarasi objek mind AR di tempat container, marker targets.mind, dan ketentuan setting
         const mindarThree = new MindARThree({
-            container: document.getElementById("container"),
+            container: document.body,
             imageTargetSrc: './marker/targets.mind',
             maxTrack: 1,
             filterMinCF: 0.0001,
