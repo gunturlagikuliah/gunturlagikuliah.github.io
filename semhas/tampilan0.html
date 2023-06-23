@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html data-theme="light">
+
+<head>
+  <meta name="viewport" content="width=1024" initial-scale=1.0 maximum-scale=1.0, user-scalable=0>
+  <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+  <script type="importmap">
+		{
+			"imports": {
+				"three": "https://unpkg.com/three@0.147.0/build/three.module.js",
+				"three/addons/": "https://unpkg.com/three@0.147.0/examples/jsm/",
+				"mindar-image-three":"https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-three.prod.js"
+			}
+		}
+		</script>
+  <script src="./tampilan0.js" type="module"></script>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/chota@latest"> -->
+  <style>
+    html,
+    body {
+      position: relative;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #container {
+      width: 1000px;
+      height: 1000p;
+    }
+
+    #navigasiatas,
+    #tengah,
+    #calonkiri,
+    #calonkanan {
+      width: 1000px;
+      height: 1000px;
+      visibility: hidden;
+    }
+
+    #navigasibawah {
+      height: 1000px;
+
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+</head>
+
+<body>
+  <div id="container">
+  </div>
+  <div id="calonkiri">
+    <div class="container-fluid  animate__animated animate__fadeInLeft">
+      <div>
+        <article class="container-fluid" style="text-align: center; font-size: 80px;">
+          <b>
+            <div class="namacalonkepala"></div>
+            <img id="gambarcalonkepala" src="" alt="Calon Kepala">
+          </b>
+        </article>
+      </div>
+      <div>
+      </div>
+      <div>
+        <article class="container-fluid" style="text-align: center; font-size: 50px;">
+          <div id="halaman1" style="display:block">
+            <img id="partaicalonkepala" src="" alt="Partai" class="container-fluid">
+          </div>
+
+
+
+          <div id="halaman2" style="display:none; height: 550px; overflow-y: scroll;">
+            <table style="font-size: 60px;">
+              <tr>
+                <td>Nama lengkap</td>
+                <td class="namacalonkepala">Mamah Nomria Satu</td>
+              </tr>
+              <tr>
+                <td>Tempat tanggal lahir</td>
+                <td id="ttl">Jakarta, 1 Januari 1970</td>
+              </tr>
+              <tr>
+                <td>Hightlight</td>
+                <td>
+                  <tr id="sorotan"></tr>
+                  <tr></tr>
+                  <tr></tr>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </article>
+      </div>
+      <div>
+        <article class="container-fluid">
+          <nav class="container-fluid">
+            <ul>
+              <li><a href="#"
+                  onclick="document.getElementById('halaman2').style.display='none';document.getElementById('halaman1').style.display='block';"
+                  role="button" style="font-size: 80px;">Partai</a></li>
+              <li><a href="#"
+                  onclick="document.getElementById('halaman1').style.display='none';document.getElementById('halaman2').style.display='block';"
+                  role="button" style="font-size: 80px;">Biodata</a></li>
+            </ul>
+          </nav>
+        </article>
+      </div>
+    </div>
+
+  </div>
+  <div id="calonkanan">
+    <div class="container-fluid  animate__animated animate__fadeInRight">
+      <div>
+        <article class="container-fluid" style="text-align: center; font-size: 80px;"><b>Mamah Nomria Satu <img
+              src="./resources/calon1kanan.png"></b>
+        </article>
+      </div>
+      <div>
+      </div>
+      <div>
+        <article class="container-fluid" style="text-align: center; font-size: 50px;">
+          <div id="halamankanan1" style="display:block">
+            <img src="./resources/partai2.png" alt="Gambar" class="container-fluid">
+          </div>
+
+
+
+          <div id="halamankanan2" style="display:none; height: 550px; overflow-y: scroll;">
+            <table style="font-size: 60px;">
+              <tr>
+                <td>Nama lengkap</td>
+                <td>Mamah Nomria Satu</td>
+              </tr>
+              <tr>
+                <td>Tempat tanggal lahir</td>
+                <td>Jakarta, 1 Januari 1970</td>
+              </tr>
+              <tr>
+                <td>Jenis kelamin</td>
+                <td>Perempuan</td>
+              </tr>
+              <tr>
+                <td>Agama</td>
+                <td>Islam</td>
+              </tr>
+              <tr>
+                <td>Pendidikan terakhir</td>
+                <td>S1 Hukum Universitas Indonesia</td>
+              </tr>
+              <tr>
+                <td>Pekerjaan terakhir</td>
+                <td>Pengacara di sebuah firma hukum ternama di Jakarta</td>
+              </tr>
+              <tr>
+                <td>Pengalaman politik</td>
+                <td>Tidak ada</td>
+              </tr>
+              <tr>
+                <td>Riwayat organisasi</td>
+                <td>Tidak ada</td>
+              </tr>
+              <tr>
+                <td>Riwayat kriminal</td>
+                <td>Tidak ada</td>
+              </tr>
+            </table>
+          </div>
+        </article>
+      </div>
+      <div>
+        <article class="container-fluid">
+          <nav class="container-fluid">
+            <ul>
+              <li><a href="#"
+                  onclick="document.getElementById('halamankanan2').style.display='none';document.getElementById('halamankanan1').style.display='block';"
+                  role="button" style="font-size: 80px;">Partai</a></li>
+              <li><a href="#"
+                  onclick="document.getElementById('halamankanan1').style.display='none';document.getElementById('halamankanan2').style.display='block';"
+                  role="button" style="font-size: 80px;">Biodata</a></li>
+            </ul>
+          </nav>
+        </article>
+      </div>
+    </div>
+  </div>
+  <div id="navigasiatas">
+    <main class="container-fluid animate__animated animate__fadeInDown">
+      <a href="ub.ac.id">
+        <article class="container-fluid" style="text-align: center; font-size: 100px;">
+          <b>WEB UB.AC.ID</b>
+        </article>
+      </a>
+    </main>
+    <a id="isinavigasiatas">NAVIGASI ATAS NIH YAAA</a>
+  </div>
+  <div id="navigasibawah">
+    <div id="animasibawah" class=" animate__animated animate__fadeInUp">
+      <article>
+        <nav class="container-fluid">
+          <ul>
+            <li><a href="#" onclick="
+                                document.getElementById('visimisi').style.display='none';
+                                document.getElementById('player').style.display='block';
+                                document.getElementById('tombolvideo').style.display='block';
+                                " role="button" style="font-size: 80px;">Video</a></li>
+            <li><a href="#" onclick="
+                                document.getElementById('player').style.display='none';
+                                document.getElementById('tombolvideo').style.display='none';
+                                document.getElementById('visimisi').style.display='block';" role="button"
+                style="font-size: 80px;">Visi & Misi</a></li>
+          </ul>
+        </nav>
+      </article>
+      <article class="container-fluid" style="width: 1920px;">
+        <div class="container-fluid" id="player" style="display: block;"></div>
+        <div class="container-fluid" id="visimisi" style="display: none;">
+          <div class="container-fluid" style="text-align: center; font-size: 70px;">
+            Visi: <br>
+            Mewujudkan kota Utopia yang sejahtera, mandiri, dan berdaya saing tinggi dengan mengoptimalkan
+            potensi sumber daya alam dan manusia yang ada.<br><br>
+            Misi:<br>
+            <ol style="font-size: 70px;">
+              <li>Meningkatkan kualitas pendidikan dan pelatihan sumber daya manusia yang berkualitas dan
+                berdaya saing tinggi.</li>
+              <li>Meningkatkan kualitas infrastruktur yang mendukung pertumbuhan ekonomi dan kesejahteraan
+                masyarakat.</li>
+              <li>Meningkatkan pelayanan publik yang berkualitas dan terjangkau bagi masyarakat.</li>
+              <li>Meningkatkan kualitas lingkungan hidup yang sehat dan lestari.</li>
+              <li>Meningkatkan partisipasi masyarakat dalam pembangunan daerah.</li>
+            </ol>
+          </div>
+        </div>
+        <div id="tombolvideo">
+          <button id="tombolplay" style="font-size: 80px">Play</button>
+          <button id="tombolpause" style="font-size: 80px">Pause</button>
+
+      </article>
+    </div>
+
+  </div>
+  <div id="tengah">
+    <!-- Image plus center -->
+    <img src="./resources/pasangan1.jpg" alt="postercalon"
+      style="display: block;margin-left: auto;margin-right: auto; margin-top: 25; margin-bottom: auto;">
+    <!-- <main class="container-fluid">
+        <img class="container-fluid" src="./resources/pasangan1.jpg">
+    </main> -->
+  </div>
+</body>
+
+</html>
