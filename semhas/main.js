@@ -6,7 +6,7 @@ import data from './data.json' assert {type: "json"};
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
-        // mockWithVideo('./video/videotest.mp4');
+        // mockWithVideo('./ignore/pasangan1.mp4');
         const mindarThree = new MindARThree({
             container: document.body,
             imageTargetSrc: data.mindtarget,
