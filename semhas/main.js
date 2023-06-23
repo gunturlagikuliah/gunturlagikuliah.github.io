@@ -2,32 +2,45 @@ import * as THREE from 'three';
 import { MindARThree } from 'mindar-image-three';
 import { mockWithVideo } from './container-mock.js';
 import { CSS3DObject } from 'three/addons/renderers/CSS3DRenderer.js';
+import data from './data.json' assert {type: "json"};
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
-        //mockWithVideo('./video/calon1.mp4');
-        //Deklarasi objek mind AR di tempat container, marker targets.mind, dan ketentuan setting
+        // mockWithVideo('./testvideo.mp4');
         const mindarThree = new MindARThree({
             container: document.body,
-            imageTargetSrc: './marker/targets.mind',
+            imageTargetSrc: data.mindtarget,
             maxTrack: 1,
             filterMinCF: 0.0001,
             filterBeta: 0.001,
         })
+        const { renderer, cssRenderer, scene, cssScene, camera } = mindarThree;
 
-        const { renderer, scene, camera } = mindarThree;
-        const geometry = new THREE.PlaneGeometry(1, 1);
-        const material = new THREE.MeshBasicMaterial({ color: 0x0000FF, transparent: true, opacity: 0.5 });
-        const plane = new THREE.Mesh(geometry, material);
-        const geometry2 = new THREE.PlaneGeometry(1, 1);
-        const material2 = new THREE.MeshBasicMaterial({ color: 0x00FF66, transparent: true, opacity: 0.5 });
-        const plane2 = new THREE.Mesh(geometry2, material2);
-        const anchor = mindarThree.addAnchor(0);
-        const anchor2 = mindarThree.addAnchor(1);
-        anchor.group.add(plane); // Ini hirarki grup 3js
-        anchor2.group.add(plane2);
+        const anchor = [];
+        const pageObject = new CSS3DObject(document.getElementById('container'))
+        for (let i = 0; i < data.calon.length; i++) {
+            console.log(i);
+            anchor[i] = mindarThree.addCSSAnchor(i);
+
+        }
+        for (let i = 0; i < data.calon.length; i++) {
+            console.log('loop2')
+            console.log(i);
+            anchor[i].onTargetFound = () => {
+                console.log(`TARGET ${i} FOUND`);
+                document.getElementById('container').innerHTML=`
+                <div style="font-size: 80px; color: red;">${data.calon[i].calonkepala.nama}</div>
+                `
+                anchor[i].group.add(pageObject);
+            }
+            anchor[i].onTargetLost = () => {
+                console.log(`TARGET ${i} LOST`);
+            }
+        }
+
         await mindarThree.start()
         renderer.setAnimationLoop(() => {
+            cssRenderer.render(cssScene, camera);
             renderer.render(scene, camera);
         });
     }
