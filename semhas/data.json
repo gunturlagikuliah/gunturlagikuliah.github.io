@@ -1,5 +1,5 @@
 {
-    "mindtarget": "/path/target.mind",
+    "mindtarget": "./marker/target.mind",
     "calon": [
         {
             "visi": "Terwujudnya Indonesia maju yang berdaulat, mandiri, dan berkepribadian, berlandaskan gotong-royong",
@@ -17,13 +17,34 @@
             "youtube": "https://www.youtube.com/watch?v=tB6FWoGKOSs",
             "web": "https://id.wikipedia.org/wiki/Kampanye_Joko_Widodo-Ma%27ruf_Amin_dalam_pemilihan_umum_Presiden_Indonesia_2019",
             "poster": "path to poster",
+            "logokampanye": "./resources/logocalon1.png",
             "fotokampanye": [
                 "",
                 ""
             ],
             "partaipengusung": [
                 {
-                    "namapartai": "",
+                    "namapartai": "PDIP",
+                    "gambarpartai": ""
+                },
+                {
+                    "namapartai": "GOLKAR",
+                    "gambarpartai": ""
+                },
+                {
+                    "namapartai": "NASDEM",
+                    "gambarpartai": ""
+                },
+                {
+                    "namapartai": "PPP",
+                    "gambarpartai": ""
+                },
+                {
+                    "namapartai": "HANURA",
+                    "gambarpartai": ""
+                },
+                {
+                    "namapartai": "PKPI",
                     "gambarpartai": ""
                 }
             ],
@@ -37,9 +58,9 @@
                     "gambarpartai": ""
                 },
                 "sorotan": [
-                    "",
-                    "",
-                    ""
+                    "Walikota Surakarta (2005-2012)",
+                    "Gubernur Jakarta (2012-2014)",
+                    "Presiden Indonesia (2014-2019)"
                 ]
             },
             "calonwakil": {
@@ -52,9 +73,9 @@
                     "gambarpartai": ""
                 },
                 "sorotan": [
-                    "",
-                    "",
-                    ""
+                    "Pimpinan Pusat Nahdlatul Ulama (2015-2018) ",
+                    "Ketua Majelis Ulama Indonesia (2015-Sekarang) ",
+                    "Pendiri Pondok Pesantren An-Nawawi, Serang, Banten"
                 ]
             }
         },
@@ -70,13 +91,26 @@
             "youtube": "https://www.youtube.com/watch?v=jLv4xVU_Nk0",
             "web": "https://id.wikipedia.org/wiki/Kampanye_Prabowo_Subianto-Sandiaga_Uno_dalam_pemilihan_umum_Presiden_Indonesia_2019",
             "poster": "path to poster",
+            "logokampanye": "path to logo",
             "fotokampanye": [
                 "",
                 ""
             ],
             "partaipengusung": [
                 {
-                    "namapartai": "",
+                    "namapartai": "GERINDRA",
+                    "gambarpartai": ""
+                },
+                {
+                    "namapartai": "PKS",
+                    "gambarpartai": ""
+                },
+                {
+                    "namapartai": "PAN",
+                    "gambarpartai": ""
+                },
+                {
+                    "namapartai": "DEMOKRAT",
                     "gambarpartai": ""
                 }
             ],
@@ -86,13 +120,13 @@
                 "tanggallahir": "1951-10-17",
                 "tempatlahir": "Jakarta",
                 "partaiasal": {
-                    "namapartai": "Gerindra",
+                    "namapartai": "GERINDRA",
                     "gambarpartai": ""
                 },
                 "sorotan": [
-                    "",
-                    "",
-                    ""
+                    "Danjen Kopassus (1996-1998)",
+                    "Panglima Kostrad (1998)",
+                    "Ketua Umum Partai Gerindra"
                 ]
             },
             "calonwakil": {
@@ -105,9 +139,9 @@
                     "gambarpartai": ""
                 },
                 "sorotan": [
-                    "",
-                    "",
-                    ""
+                    "Wakil Gubernur Jakarta (2017-2018) ",
+                    "Mendirikan PT Saratoga Investama Sedaya, April 1998",
+                    "Penghargaan - Indonesian Entrepreneur of the Year, 2008"
                 ]
             }
         }

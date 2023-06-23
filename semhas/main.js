@@ -5,10 +5,10 @@ import { CSS3DObject } from 'three/addons/renderers/CSS3DRenderer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
-        mockWithVideo('./video/calon1.mp4');
+        //mockWithVideo('./video/calon1.mp4');
         //Deklarasi objek mind AR di tempat container, marker targets.mind, dan ketentuan setting
         const mindarThree = new MindARThree({
-            container: document.querySelector("body"),
+            container: document.getElementById("container"),
             imageTargetSrc: './marker/targets.mind',
             maxTrack: 1,
             filterMinCF: 0.0001,
