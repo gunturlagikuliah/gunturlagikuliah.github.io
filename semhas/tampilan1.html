@@ -32,9 +32,20 @@
     }
 
     #plane {
-      width: 1200px;
-      height: 1000px;
+      width: 2500px;
+      height: 2500px;
       visibility: hidden;
+    }
+    .borderhitam {
+      border: 15px solid black;
+      margin: 0;
+      padding: 0;
+    }
+
+    .borderhijau {
+      border: 15px solid rgb(23, 170, 89);
+      margin: 0;
+      padding: 0;
     }
   </style>
 </head>
@@ -42,12 +53,20 @@
 <body>
   <div id="container">
   </div>
-  <div id="plane" style="width: 100px;
-  height: 1000px;
-  width: 2500px;
-  border: 15px solid black;
-  margin: 0;
-  padding: 0;">
+  <div id="plane" class="borderhijau">
+    <div class="row " style="height: 480px;"></div>
+    <div class="row " style="height: 1500px;">
+      <div class="col borderhitam nama" >
+        <div id="namacalonkiri" style="font-size: 80px; color: red;"></div>
+      </div>
+      <div class="col-6 borderhijau nama" style="">
+        <img id="poster" src="" style="">
+      </div>
+      <div class="col borderhitam nama">
+        <div id="namacalonkanan" style="font-size: 80px; color: red;"></div>
+      </div>
+    </div>
+    <div class="row " style="height: 500px;"></div>
   </div>
 </body>
 

@@ -90,8 +90,8 @@
             ],
             "youtube": "https://www.youtube.com/watch?v=jLv4xVU_Nk0",
             "web": "https://id.wikipedia.org/wiki/Kampanye_Prabowo_Subianto-Sandiaga_Uno_dalam_pemilihan_umum_Presiden_Indonesia_2019",
-            "poster": "path to poster",
-            "logokampanye": "path to logo",
+            "poster": "./resources/pasangan2mid.jpg",
+            "logokampanye": "./resources/logocalon2.png",
             "fotokampanye": [
                 "",
                 ""

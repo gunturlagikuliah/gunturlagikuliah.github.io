@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(i);
             anchor[i].onTargetFound = () => {
                 console.log(`TARGET ${i} FOUND`);
-                document.getElementById('plane').innerHTML=`
-                <div style="font-size: 80px; color: red;">${data.calon[i].calonkepala.nama}</div>
-                `
+                document.getElementById('namacalonkiri').innerHTML=data.calon[i].calonkepala.nama;
+                document.getElementById('namacalonkanan').innerHTML=data.calon[i].calonwakil.nama;
+                document.getElementById('poster').src=data.calon[i].poster;
                 anchor[i].group.add(pageObject);
             }
             anchor[i].onTargetLost = () => {

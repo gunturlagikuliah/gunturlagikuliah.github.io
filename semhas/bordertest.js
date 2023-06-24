@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const { renderer, cssRenderer, scene, cssScene, camera } = mindarThree;
 
         const anchor = [];
-        const pageObject = new CSS3DObject(document.getElementById('plane'))
+        const pageObject = new CSS3DObject(document.getElementById('plane'));
+        // pageObject.position.set(0,0,0);
         for (let i = 0; i < data.calon.length; i++) {
             console.log(i);
             anchor[i] = mindarThree.addCSSAnchor(i);
@@ -28,9 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(i);
             anchor[i].onTargetFound = () => {
                 console.log(`TARGET ${i} FOUND`);
-                document.getElementById('plane').innerHTML=`
-                <div style="font-size: 80px; color: red;">${data.calon[i].calonkepala.nama}</div>
-                `
+                // document.getElementById('plane').innerHTML=`
+                // <div style="font-size: 80px; color: red;">${data.calon[i].calonkepala.nama}</div>
+                // `;
                 anchor[i].group.add(pageObject);
             }
             anchor[i].onTargetLost = () => {
