@@ -17,11 +17,9 @@
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"> -->
   <link rel="stylesheet" href="https://unpkg.com/chota@latest">
   <style>
-
-
     #plane {
       width: 2500px;
-      height:1000px;
+      height: 2500px;
     }
 
     .borderhitam {
@@ -41,18 +39,31 @@
       margin: 0;
       padding: 0;
     }
+    .gambarfill{
+      width: 1000px;
+      height: 500px;
+      object-fit: contain;
+    }
+    
   </style>
 </head>
 
 <body>
-  <div id="nama"></div>
-  <div id="plane" class="bordermerah">
-    <div class="row " style="height: 900px;">
-      <div class="col borderhitam nama" ></div>
-      <div class="col-6 borderhijau nama" style="vertical-align: text-top;"></div>
-      <div class="col borderhitam nama"></div>
+  <div id="plane" class="borderhijau">
+    <div class="row " style="height: 480px;"></div>
+    <div class="row " style="height: 1500px;">
+      <div class="col borderhitam nama">
+        <div id="namacalonkiri" style="font-size: 80px; color: red;"></div>
+      </div>
+      <div class="col-5 borderhijau nama">
+        <img id="poster"class="gambarfill" src="./resources/pasangan1mid.jpg">
+      </div>
+      <div class="col borderhitam nama">
+        <div id="namacalonkanan" style="font-size: 80px; color: red;"></div>
+      </div>
     </div>
-  </div>
+    <div class="row " style="height: 500px;"></div>
+    </div>
 </body>
 
 </html>
