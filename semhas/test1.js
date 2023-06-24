@@ -6,7 +6,7 @@ console.log(data);
 // asdadsads <br>\
 // <button></button>\
 // ';
-document.querySelector('#container').innerHTML=`
-test<br>
-<img src='${data.calon[0].logokampanye}' alt='cambar'></img>
-`;
+// document.querySelector('#container').innerHTML=`
+// test<br>
+// <img src='${data.calon[0].logokampanye}' alt='cambar'></img>
+// `;

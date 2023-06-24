@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=1024" initial-scale=1.0 maximum-scale=1.0, user-scalable=0>
-		<script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
-		<script type="importmap">
+
+<head>
+  <meta name="viewport" content="width=1024" initial-scale=1.0 maximum-scale=1.0, user-scalable=0>
+  <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+  <script type="importmap">
 		{
 			"imports": {
 				"three": "https://unpkg.com/three@0.147.0/build/three.module.js",
@@ -12,20 +13,43 @@
 			}
 		}
 		</script>
-    <script src="./test1.js" type="module"></script>
-    <link rel="stylesheet" href="https://unpkg.com/chota@latest">
-    <style>
-      html,body {
-        position: relative;
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-      }
+  <!-- <script src="./test1.js" type="module"></script> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+  <style>
 
-    </style>
-  </head>
-  <body>
-    <div id="container"></div>
-  </body>
+
+    #plane {
+      width: 2400px;
+      height:1200px;
+    }
+
+    .borderhitam {
+      border: 15px solid black;
+      margin: 0;
+      padding: 0;
+    }
+
+    .borderhijau {
+      border: 15px solid rgb(23, 170, 89);
+      margin: 0;
+      padding: 0;
+    }
+
+    .bordermerah {
+      border: 15px solid rgb(170, 45, 23);
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="plane" class="bordermerah row">
+    <div class="col borderhitam"></div>
+    <div class="col-6 borderhijau"></div>
+    <div class="col borderhitam"></div>
+  </div>
+</body>
+
 </html>
