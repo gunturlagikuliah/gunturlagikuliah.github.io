@@ -16,10 +16,16 @@
   <script src="./test1.js" type="module"></script>
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"> -->
   <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+  <link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
   <style>
+    body {
+      font-family: 'Aleo';
+      font-size: 50px;
+    }
+
     #plane {
-      width: 2500px;
-      height: 2500px;
+      width: 2000px;
+      height: 1200px;
     }
 
     .borderhitam {
@@ -39,31 +45,100 @@
       margin: 0;
       padding: 0;
     }
-    .gambarfill{
-      width: 1000px;
-      height: 500px;
+
+    .gambarfill {
+      width: 1500px;
+      height: 1100px;
       object-fit: contain;
     }
-    
+
+    /* Style for the pop-up container */
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    /* Style for the pop-up content */
+    .popup-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    /* Style for the close button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
   </style>
 </head>
 
 <body>
   <div id="plane" class="borderhijau">
-    <div class="row " style="height: 480px;"></div>
-    <div class="row " style="height: 1500px;">
-      <div class="col borderhitam nama">
-        <div id="namacalonkiri" style="font-size: 80px; color: red;"></div>
+    <div class="row" style="height: 50%;">
+      <div class="col-6 borderhitam"></div>
+      <div class="col bordermerah"></div>
+    </div>
+    <div class="row" style="height: 50%;">
+      <div class="col-6 borderhitam is-center">
+        <button type="button" class="button icon is-full-width is-center"
+          style="font-size: 100px; border-radius: 80px; height: 300px; background-color:rgb(233, 237, 201);">Situs
+          Resmi&nbsp;
+          <img src="https://icongr.am/entypo/globe.svg?size=128&color=3f4144" alt="icon">
+        </button>
       </div>
-      <div class="col-5 borderhijau nama">
-        <img id="poster"class="gambarfill" src="./resources/pasangan1mid.jpg">
-      </div>
-      <div class="col borderhitam nama">
-        <div id="namacalonkanan" style="font-size: 80px; color: red;"></div>
+      <div class="col bordermerah is-center">
+        <button type="button" class="button icon is-full-width is-center"
+          style="font-size: 100px; border-radius: 80px; height: 300px; background-color:#E9EDC9;"
+          onclick="document.getElementById('popup').style.display='block' ">Situs Resmi&nbsp;
+          <img src="https://icongr.am/entypo/globe.svg?size=128&color=3f4144" alt="icon">
+        </button>
       </div>
     </div>
-    <div class="row " style="height: 500px;"></div>
-    </div>
+  </div>
+
+
+  <!-- POP UP VISI MISI -->
+  <div id="popup" class="popup">
+		<!-- The pop-up content -->
+		<div class="popup-content ">
+			<span class="close" onclick="document.getElementById('popup').style.display='none' ">&times;</span>
+			<h4 class="text-center">VISI</h4>
+      <h4 class="text-center">MISI</h4>
+      <ol>
+        <li>
+          "Membangun perekonomian nasional yang adil, makmur, berkualitas, dan berwawasan lingkungan dengan mengutamakan kepentingan rakyat Indonesia melalui jalan politik-ekonomi sesuai Pasal 33 dan 34 UUD Negara Republik Indonesia Tahun 1945. ",
+        </li>
+        <li>
+          "Membangun perekonomian nasional yang adil, makmur, berkualitas, dan berwawasan lingkungan dengan mengutamakan kepentingan rakyat Indonesia melalui jalan politik-ekonomi sesuai Pasal 33 dan 34 UUD Negara Republik Indonesia Tahun 1945. ",
+        </li>
+        <li></li>
+      </ol>
+		</div>
+	</div>
 </body>
+<div style="height: 25%;"></div>
+<button type="button" class="button primary icon"
+  style="font-size: 100px; text-align: center; border-radius: 80px; height: 300px; width: 100%;">New file
+  <img src="https://icongr.am/feather/file.svg?size=250&amp;color=ffffff" alt="icon">
+</button>
 
 </html>
