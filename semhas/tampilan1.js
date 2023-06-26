@@ -6,7 +6,7 @@ import data from './data.json' assert {type: "json"};
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
-        // mockWithVideo('./ignore/pasangan2.mp4');
+        // mockWithVideo('./ignore/videotest.mp4');
         const mindarThree = new MindARThree({
             container: document.body,
             imageTargetSrc: data.mindtarget,
@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // VISI MISI
                 document.getElementById('visi').innerHTML = data.calon[i].visi;
+                document.getElementById('misi').innerHTML ='';
                 for (let j = 0; j < data.calon[i].misi.length; j++) {
                     document.getElementById('misi').innerHTML += `<li>${data.calon[i].misi[j]}</li>`
                 }
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('namakepala').innerHTML = data.calon[i].calonkepala.nama;
                 document.getElementById('ttlkepala').innerHTML = `${data.calon[i].calonkepala.tempatlahir}, ${data.calon[i].calonkepala.tanggallahir}`;
                 document.getElementById('fotopartaikepala').src = data.calon[i].calonkepala.partaiasal.gambarpartai;
+                document.getElementById('sorotankepala').innerHTML='';
                 for (let j = 0; j < data.calon[i].calonkepala.sorotan.length; j++) {
                     document.getElementById('sorotankepala').innerHTML += `<li>${data.calon[i].calonkepala.sorotan[j]}</li>`
                 }
@@ -54,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('namawakil').innerHTML = data.calon[i].calonwakil.nama;
                 document.getElementById('ttlwakil').innerHTML = `${data.calon[i].calonwakil.tempatlahir}, ${data.calon[i].calonwakil.tanggallahir}`;
                 document.getElementById('fotopartaiwakil').src = data.calon[i].calonwakil.partaiasal.gambarpartai;
+                document.getElementById('sorotanwakil').innerHTML='';
                 for (let j = 0; j < data.calon[i].calonwakil.sorotan.length; j++) {
                     document.getElementById('sorotanwakil').innerHTML += `<li>${data.calon[i].calonwakil.sorotan[j]}</li>`
                 }
