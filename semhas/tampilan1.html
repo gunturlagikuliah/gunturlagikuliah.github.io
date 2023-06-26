@@ -16,6 +16,7 @@
   <script src="./tampilan1.js" type="module"></script>
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"> -->
   <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+  <link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
   <style>
     html,
     body {
@@ -24,6 +25,7 @@
       width: 100%;
       height: 100%;
       overflow: hidden;
+      font-family: 'Aleo';
     }
 
     #container {
@@ -32,10 +34,16 @@
     }
 
     #plane {
-      width: 2500px;
-      height: 2500px;
+      width: 1000px;
+      height: 1000px;
       visibility: hidden;
     }
+
+    #plane {
+      width: 2000px;
+      height: 1200px;
+    }
+
     .borderhitam {
       border: 15px solid black;
       margin: 0;
@@ -47,6 +55,73 @@
       margin: 0;
       padding: 0;
     }
+
+    .bordermerah {
+      border: 15px solid rgb(170, 45, 23);
+      margin: 0;
+      padding: 0;
+    }
+
+    .gambarfill {
+      width: 1500px;
+      height: 1100px;
+      object-fit: contain;
+    }
+
+    /* Style for the pop-up container */
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: none;
+      background-color: rgba(0, 0, 0, 0.4);
+      font-size: 250%;
+      /* alt 700px */
+    }
+
+    /* Style for the pop-up content */
+    .popup-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 50px;
+      border: 1px solid #888;
+      width: 90%;
+      height: 90%;
+      overflow-y: scroll;
+      border-radius: 2%;
+    }
+
+    /* Style for the close button */
+    .close {
+      color: #aaa;
+      font-size: 200%;
+      font-weight: bold;
+      position: absolute;
+      right: 9%;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .foto {
+      border-radius: 30%;
+      width: 700px;
+      height: 700px;
+      object-fit: cover;
+    }
+
+    .fotopartai {
+      object-fit: contain;
+      height: 500px;
+    }
   </style>
 </head>
 
@@ -54,19 +129,94 @@
   <div id="container">
   </div>
   <div id="plane" class="borderhijau">
-    <div class="row " style="height: 480px;"></div>
-    <div class="row " style="height: 1500px;">
-      <div class="col borderhitam nama" >
-        <div id="namacalonkiri" style="font-size: 80px; color: red;"></div>
+    <div class="row" style="height: 50%;">
+      <div class="col-6 borderhitam is-center">
+        <a href="https://google.com" target="_blank" id="videoprofil" type="button" class="button icon is-full-width is-center"
+          style="font-size: 100px; border-radius: 80px; height: 300px; background-color:#E9EDC9; ">Video Profil&nbsp;
+          <img src="https://icongr.am/entypo/video.svg?size=128&color=3f4144" alt="icon">
+        </a>
       </div>
-      <div class="col-5 borderhijau nama">
-        <img id="poster" src="">
-      </div>
-      <div class="col borderhitam nama">
-        <div id="namacalonkanan" style="font-size: 80px; color: red;"></div>
+      <div class="col bordermerah is-center">
+        <button type="button" class="button icon is-full-width is-center"
+          style="font-size: 100px; border-radius: 80px; height: 300px; background-color:rgb(233, 237, 201)"
+          onclick="document.getElementById('popupbiodata').style.display='block'">
+          Profil Personal&nbsp;
+          <img src="https://icongr.am/entypo/v-card.svg?size=128&color=3f4144" alt="icon">
+        </button>
       </div>
     </div>
-    <div class="row " style="height: 500px;"></div>
+    <div class="row" style="height: 50%;">
+      <div class="col-6 borderhitam is-center">
+        <a href="#" target="_blank" id="situsresmi" type="button" class="button icon is-full-width is-center"
+          style="font-size: 100px; border-radius: 80px; height: 300px; background-color:#E9EDC9; ">Situs Resmi&nbsp;
+          <img src="https://icongr.am/entypo/globe.svg?size=128&color=3f4144" alt="icon">
+        </a>
+      </div>
+      <div class="col bordermerah is-center">
+        <button type="button" class="button icon is-full-width is-center"
+          style="font-size: 100px; border-radius: 80px; height: 300px; background-color:#E9EDC9;"
+          onclick="document.getElementById('popupvisimisi').style.display='block' ">Visi & Misi&nbsp;
+          <img src="https://icongr.am/fontawesome/lightbulb-o.svg?size=128&color=3f4144" alt="icon">
+        </button>
+      </div>
+    </div>
+
+  </div>>   
+    <!-- POP UP VISI MISI -->
+  <div id="popupvisimisi" class="popup">
+    <!-- The pop-up content -->
+    <div class="popup-content ">
+      <span class="close" onclick="document.getElementById('popupvisimisi').style.display='none' ">&times;</span>
+      <br>
+      <h4 class="text-center">VISI</h4>
+      <p id="visi" class="text-justify">
+        Lorem Ipsum
+      </p>
+      <h4 class="text-center">MISI</h4>
+      <ol id="misi" class="text-justify">
+      </ol>
+    </div>
+  </div>
+
+  <!-- KALAU BUREM GARA2 DUA CALON -->
+  <!-- POP UP BIODATA -->
+  <div id="popupbiodata" class="popup">
+    <!-- The pop-up content -->
+    <div class="popup-content ">
+      <span class="close" onclick="document.getElementById('popupbiodata').style.display='none' ">&times;</span>
+      <br>
+      <h4 id="nomorkepala" class="text-center text-bold">Lorem Ipsum</h4>
+      <div class="is-center">
+        <img id="fotocalonkepala" class="foto" src="" alt="">
+      </div>
+      <h4 id="namakepala" class="text-center"></h4>
+      <div id="ttlkepala" class="text-center">
+        indramayu, 30 Agustus 2023<br>
+      </div>
+      <div class="is-center">
+        <img id="fotopartaikepala" class="fotopartai" src="">
+      </div>
+      <br>
+      <h4 class="text-center">SOROTAN UTAMA</h4>
+      <ol id="sorotankepala" class="text-justify" style="position: relative; margin-left: 10%;">
+      </ol>
+      <h4 id="nomorwakil" class="text-center text-bold"><b>CALON WAKIL PRESIDEN RI NO. 01</b></h4>
+      <div class="is-center">
+        <img id="fotocalonwakil" class="foto" src="./resources/foto/sandi.jpg" alt="">
+      </div>
+      <h4 id="namawakil" class="text-center">SANDIAGA UNO</h4>
+      <div id="ttlwakil" class="text-center">
+      </div>
+      <div class="is-center">
+        <img id="fotopartaiwakil" class="fotopartai" src="">
+      </div>
+      <br>
+      <h4 class="text-center">SOROTAN UTAMA</h4>
+      <ol id="sorotanwakil" class="text-justify" style="position: relative; margin-left: 10%;">
+      </ol>
+    </div>
+  </div>
+  
   </div>
 </body>
 
