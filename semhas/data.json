@@ -51,7 +51,7 @@
             "calonkepala": {
                 "nama": "Ir. H. JOKO WIDODO",
                 "foto": "./resources/foto/jokowi.jpg",
-                "tanggallahir": "1961-06-21",
+                "tanggallahir": "21 Juni 1961",
                 "tempatlahir": "Surakarta",
                 "partaiasal": {
                     "namapartai": "PDIP",
@@ -66,7 +66,7 @@
             "calonwakil": {
                 "nama": "Prof. Dr. (HC). KH. MA'RUF AMIN",
                 "foto": "./resources/foto/maruf.jpg",
-                "tanggallahir": "1943-03-11",
+                "tanggallahir": "11 Maret 1943",
                 "tempatlahir": "Tangerang",
                 "partaiasal": {
                     "namapartai": "Independen",
@@ -117,7 +117,7 @@
             "calonkepala": {
                 "nama": "H. PRABOWO SUBIANTO",
                 "foto": "./resources/foto/prabowo.webp",
-                "tanggallahir": "1951-10-17",
+                "tanggallahir": "17 Oktober 1951",
                 "tempatlahir": "Jakarta",
                 "partaiasal": {
                     "namapartai": "GERINDRA",
@@ -132,7 +132,7 @@
             "calonwakil": {
                 "nama": "SANDIAGA SALAHUDDIN UNO, MBA",
                 "foto": "./resources/foto/sandi.jpg",
-                "tanggallahir": "1969-06-28",
+                "tanggallahir": "28 Juni 1969",
                 "tempatlahir": "Pekanbaru",
                 "partaiasal": {
                     "namapartai": "Independen",
