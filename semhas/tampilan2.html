@@ -109,7 +109,7 @@
     #overlay * {
       color: white;
       /* Warna teks putih */
-      font-size: 35px;
+      font-size: 45px;
       /* Teks rata tengah */
       margin-top: 5%;
       margin-left: 5%;
@@ -131,7 +131,9 @@
   <!-- OVERLAY -->
   <div id="overlay">
     <!-- Tombol tutup overlay -->
-    <button id="close-button" onclick="document.getElementById('overlay').style.display='none'">X</button>
+    <div class="is-fixed is-right" style="bottom: 6%; z-index: 4;">
+      <button id="close-button" onclick="document.getElementById('overlay').style.display='none'">TUTUP</button>
+    </div>
     <!-- LOGO -->
     <div class="is-center">
       <img id="logocalon" class="logocalon" src="">
