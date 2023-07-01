@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=1024" initial-scale=1.0 maximum-scale=1.0, user-scalable=0>
+  <!-- <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+  <script type="importmap">
+		{
+			"imports": {
+				"three": "https://unpkg.com/three@0.147.0/build/three.module.js",
+				"three/addons/": "https://unpkg.com/three@0.147.0/examples/jsm/",
+				"mindar-image-three":"https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-three.prod.js"
+			}
+		}
+		</script>
+  <script src="./tampilan2.js" type="module"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+  <link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
+  <style> -->
+
+    <script async src="./libs/offline/script/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./libs/offline/script/threejs/three.module.js",
+          "three/addons/": "./libs/offline/script/threejs/jsm/",
+          "mindar-image-three":"./libs/offline/script/mindar/mindar-image-three.prod.js"
+        }
+      }
+      </script>
+    <script src="./tampilan3.js" type="module"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"> -->
+    <link rel="stylesheet" href="./libs/offline/css/chota.min.css">
+    <link href='./libs/offline/font/fontaleo.css' rel='stylesheet'>
+    <style>
+
+
+    html,
+    body {
+      position: relative;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Aleo';
+    }
+
+    #container {
+      width: 1000px;
+      height: 1000px;
+    }
+
+    #plane {
+      width: 1000px;
+      height: 1000px;
+      visibility: hidden;
+    }
+
+    #plane {
+      width: 3000px;
+      height: 2500px;
+    }
+
+    .borderhitam {
+      border: 15px solid black;
+      margin: 0;
+      padding: 0;
+    }
+
+    .borderhijau {
+      border: 15px solid rgb(23, 170, 89);
+      margin: 0;
+      padding: 0;
+    }
+
+    .bordermerah {
+      border: 15px solid rgb(170, 45, 23);
+      margin: 0;
+      padding: 0;
+    }
+
+    .foto {
+      border-radius: 30%;
+      width: 700px;
+      height: 700px;
+      object-fit: cover;
+    }
+
+    .fotopartai {
+      object-fit: contain;
+      height: 500px;
+    }
+
+    .logocalon {
+      object-fit: contain;
+      height: 300px;
+    }
+
+    /* Gaya untuk elemen overlay */
+    #overlay {
+      position: fixed;
+      /* Menempatkan elemen di atas konten halaman web */
+      display: none;
+      /* Menyembunyikan elemen secara default */
+      width: 100%;
+      /* Lebar penuh (menutupi seluruh halaman) */
+      height: 100%;
+      /* Tinggi penuh (menutupi seluruh halaman) */
+      top: 0;
+      /* Menempatkan elemen di bagian atas halaman */
+      left: 0;
+      /* Menempatkan elemen di bagian kiri halaman */
+      right: 0;
+      /* Menempatkan elemen di bagian kanan halaman */
+      bottom: 0;
+      /* Menempatkan elemen di bagian bawah halaman */
+      background-color: rgba(0, 0, 0, 0.85);
+      /* Warna latar belakang dengan transparansi 50% */
+      z-index: 3;
+      /* Menempatkan elemen di atas konten halaman web lainnya */
+
+      overflow-y: scroll;
+    }
+
+    /* Gaya untuk teks pada overlay */
+    #overlay * {
+      color: white;
+      /* Warna teks putih */
+      font-size: 45px;
+      /* Teks rata tengah */
+      margin-top: 5%;
+      margin-left: 5%;
+      margin-right: 5%;
+      /* Jarak antara teks dan bagian atas halaman */
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+  </div>
+
+  <!-- Objek yang merekat di marker -->
+  <div id="plane" class="borderhijau">
+      <div class="row " style="height: 480px;"></div>
+      <div class="row " style="height: 1500px;">
+        <div class="col borderhitam nama" ></div>
+        <div class="col-4 borderhijau nama" style="vertical-align: text-top;"></div>
+        <div class="col borderhitam nama"></div>
+      </div>
+      <div class="row " style="height: 500px;"></div>
+  </div>>
+
+  <!-- OVERLAY -->
+  <div id="overlay">
+    <!-- Tombol tutup overlay -->
+    <div class="is-fixed is-right" style="bottom: 6%; z-index: 4;">
+      <button id="close-button" onclick="document.getElementById('overlay').style.display='none'">TUTUP</button>
+    </div>
+    <!-- LOGO -->
+    <div class="is-center">
+      <img id="logocalon" class="logocalon" src="">
+    </div>
+    <!-- VISI MISI -->
+    <div class="text-center">VISI</div>
+    <div id="visi" class="text-justify">
+      Lorem Ipsum
+    </div>
+    <h4 class="text-center">MISI</h4>
+    <ol id="misi" class="text-justify">
+    </ol>
+    <br>
+    <!-- Profil Personal -->
+    <h4 id="nomorkepala" class="text-center text-bold">Lorem Ipsum</h4>
+    <div class="is-center">
+      <img id="fotocalonkepala" class="foto" src="" alt="">
+    </div>
+    <h4 id="namakepala" class="text-center"></h4>
+    <div id="ttlkepala" class="text-center">
+      indramayu, 30 Agustus 2023<br>
+    </div>
+    <div class="is-center">
+      <img id="fotopartaikepala" class="fotopartai" src="">
+    </div>
+    <br>
+    <h4 class="text-center">SOROTAN UTAMA</h4>
+    <ol id="sorotankepala" class="text-justify" style="position: relative; margin-left: 10%;">
+    </ol>
+    <br>
+    <h4 id="nomorwakil" class="text-center text-bold"><b>CALON WAKIL PRESIDEN RI NO. 01</b></h4>
+    <div class="is-center">
+      <img id="fotocalonwakil" class="foto" src="./resources/foto/sandi.jpg" alt="">
+    </div>
+    <h4 id="namawakil" class="text-center">SANDIAGA UNO</h4>
+    <div id="ttlwakil" class="text-center">
+    </div>
+    <div class="is-center">
+      <img id="fotopartaiwakil" class="fotopartai" src="">
+    </div>
+    <br>
+    <h4 class="text-center">SOROTAN UTAMA</h4>
+    <ol id="sorotanwakil" class="text-justify" style="position: relative; margin-left: 10%;">
+    </ol>
+
+    <!-- Youtube -->
+    <div class="is-center">
+      <iframe id="youtube" class="is-full-width" height="711" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <!-- Button WEB -->
+    <div class="is-center">
+      <a href="#" target="_blank" id="situsresmi" type="button" class="button icon is-center is-full-width"
+          style="font-size: 100px; border-radius: 80px; height: 300px; background-color:#E9EDC9; color: #3f4144; ">Situs Resmi&nbsp;
+          <img src="https://icongr.am/entypo/globe.svg?size=128&color=3f4144" alt="icon">
+        </a>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
