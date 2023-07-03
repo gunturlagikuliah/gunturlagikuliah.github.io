@@ -49,15 +49,10 @@
       height: 1000px;
     }
 
-    #plane {
-      width: 1000px;
-      height: 1000px;
-      visibility: hidden;
-    }
 
     #plane {
-      width: 3300px;
-      height: 2500px;
+      width: 3800px;
+      height: 2800px;
     }
 
     .borderhitam {
@@ -80,19 +75,19 @@
 
     .foto {
       border-radius: 30%;
-      width: 700px;
-      height: 700px;
+      width: 500px;
+      height: 500px;
       object-fit: cover;
     }
 
     .fotopartai {
       object-fit: contain;
-      height: 500px;
+      height: 350px;
     }
 
     .logocalon {
       object-fit: contain;
-      height: 300px;
+      height: 600px;
     }
 
     /* Gaya untuk elemen overlay */
@@ -136,13 +131,13 @@
     /* BOX */
 
     .box {
-      background-color: #E9EDC9;
+      background-color: #e6e6e6;
       margin: 1%;
       padding: 4%;
       border-radius: 2%;
-      font-size: 80px;
+      font-size: 70px;
       overflow-y: auto;
-      height: 2400px;
+      height: 2800px;
     }
   </style>
 </head>
@@ -169,13 +164,20 @@
         </div>
         <br>
         <h4 class="text-center">SOROTAN UTAMA</h4>
-        <ol id="sorotankepala" class="text-justify" style="position: relative; margin-left: 10%;">
+        <ol id="sorotankepala" class="text-justify" style="position: relative;">
         </ol>
         <br>
       </div>
       <!-- -->
       <div class="col-6 borderhijau nama">
-        <div class="row borderhitam" style="height: 340px;"></div>
+        <div class="row borderhitam" style="height: 650px;">
+          <div class="col">
+            <!-- LOGO -->
+            <div class="is-center">
+              <img id="logocalon" class="logocalon" src="">
+            </div>
+          </div>
+        </div>
         <!-- VISI DAN MISI -->
         <div class="row bordermerah box" style="height: 1800px;">
           <div class="col">
@@ -193,8 +195,21 @@
         <div class="row borderhijau " style="height: 350px;"></div>
       </div>
       <!-- Calon Wakil -->
-      <div class="col borderhitam nama box">
-        asd
+      <div class="col borderhitam nama box" style="font-size: 50px;">
+        <h4 id="nomorwakil" class="text-center text-bold"><b>CALON WAKIL PRESIDEN RI NO. 01</b></h4>
+        <div class="is-center">
+          <img id="fotocalonwakil" class="foto" src="./resources/foto/sandi.jpg" alt="">
+        </div>
+        <h4 id="namawakil" class="text-center">SANDIAGA UNO</h4>
+        <div id="ttlwakil" class="text-center">
+        </div>
+        <div class="is-center">
+          <img id="fotopartaiwakil" class="fotopartai" src="">
+        </div>
+        <br>
+        <h4 class="text-center">SOROTAN UTAMA</h4>
+        <ol id="sorotanwakil" class="text-justify" style="position: relative;">
+        </ol>
       </div>
       <!--  -->
     </div>
