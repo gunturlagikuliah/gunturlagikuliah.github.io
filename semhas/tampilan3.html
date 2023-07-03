@@ -132,6 +132,18 @@
       margin-right: 5%;
       /* Jarak antara teks dan bagian atas halaman */
     }
+
+    /* BOX */
+
+    .box {
+      background-color: #E9EDC9;
+      margin: 1%;
+      padding: 4%;
+      border-radius: 2%;
+      font-size: 80px;
+      overflow-y: auto;
+      height: 2400px;
+    }
   </style>
 </head>
 
@@ -142,13 +154,49 @@
   <!-- Objek yang merekat di marker -->
   <div id="plane" class="borderhijau">
     <div class="row">
-      <div class="col borderhitam nama"></div>
-      <div class="col-7 borderhijau nama">
+      <!-- Calon Kepala -->
+      <div class="col borderhitam nama box" style="font-size: 50px;">
+        <h4 id="nomorkepala" class="text-center text-bold">Lorem Ipsum</h4>
+        <div class="is-center">
+          <img id="fotocalonkepala" class="foto" src="" alt="">
+        </div>
+        <h4 id="namakepala" class="text-center"></h4>
+        <div id="ttlkepala" class="text-center">
+          indramayu, 30 Agustus 2023<br>
+        </div>
+        <div class="is-center">
+          <img id="fotopartaikepala" class="fotopartai" src="">
+        </div>
+        <br>
+        <h4 class="text-center">SOROTAN UTAMA</h4>
+        <ol id="sorotankepala" class="text-justify" style="position: relative; margin-left: 10%;">
+        </ol>
+        <br>
+      </div>
+      <!-- -->
+      <div class="col-6 borderhijau nama">
         <div class="row borderhitam" style="height: 340px;"></div>
-        <div class="row bordermerah" style="height: 1800px;"></div>
+        <!-- VISI DAN MISI -->
+        <div class="row bordermerah box" style="height: 1800px;">
+          <div class="col">
+            <h4 class="text-center">VISI</h4>
+            <div id="visi" class="text-justify">
+              Lorem Ipsum
+            </div>
+            <h4 class="text-center">MISI</h4>
+            <ol id="misi" class="text-justify">
+            </ol>
+            <br>
+          </div>
+        </div>
+        <!--  -->
         <div class="row borderhijau " style="height: 350px;"></div>
       </div>
-      <div class="col borderhitam nama"></div>
+      <!-- Calon Wakil -->
+      <div class="col borderhitam nama box">
+        asd
+      </div>
+      <!--  -->
     </div>
 
   </div>>
