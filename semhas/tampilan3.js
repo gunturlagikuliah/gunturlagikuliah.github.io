@@ -29,9 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
             anchor[i].onTargetFound = () => {
                 console.log(`TARGET ${i} FOUND`);
                 // LINK
-                // document.getElementById('videoprofil').href = data.calon[i].youtube;
                 console.log(data.calon[i].youtube.slice(32));
-                document.getElementById('youtube').src=`https://www.youtube.com/embed/${data.calon[i].youtube.slice(32)}`;
+                document.getElementById('videoprofil').href=data.calon[i].youtube;
                 document.getElementById('situsresmi').href = data.calon[i].web;
 
                 //LOGO CALON
