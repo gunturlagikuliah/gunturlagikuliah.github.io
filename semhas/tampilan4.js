@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
             anchor[i].onTargetFound = () => {
                 console.log(`TARGET ${i} FOUND`);
 
+                //Button
+                document.getElementById('navigasi').style.display="block";
+
                 //LOGO
                 document.getElementById('logocalon').src=data.calon[i].logokampanye;
 
@@ -75,6 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             anchor[i].onTargetLost = () => {
                 console.log(`TARGET ${i} LOST`);
+                
+                //Button
+                document.getElementById('navigasi').style.display="none";
             }
         }
 
