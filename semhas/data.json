@@ -19,8 +19,9 @@
             "poster": "./resources/pasangan1mid.jpg",
             "logokampanye": "./resources/logocalon1.png",
             "fotokampanye": [
-                "",
-                ""
+                "./resources/calon1kampanye1.jpg",
+                "./resources/calon1kampanye2.jpg",
+                "./resources/calon1kampanye3.jpg"
             ],
             "partaipengusung": [
                 {
@@ -93,8 +94,9 @@
             "poster": "./resources/pasangan2mid.jpg",
             "logokampanye": "./resources/logocalon2.png",
             "fotokampanye": [
-                "",
-                ""
+                "./resources/calon2kampanye1.jpg",
+                "./resources/calon2kampanye2.jpg",
+                "./resources/calon2kampanye3.jpg"
             ],
             "partaipengusung": [
                 {

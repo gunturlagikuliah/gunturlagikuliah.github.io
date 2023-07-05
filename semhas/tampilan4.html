@@ -14,8 +14,10 @@
 		}
 		</script>
   <script src="./tampilan4.js" type="module"></script>
+  <script src="./tampilan4slideshow.js" type="module"></script>
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"> -->
   <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
   <style>
     html,
@@ -124,71 +126,112 @@
       object-fit: contain;
       height: 500px;
     }
-    #navigasi{
-      position:fixed;
+
+    .logocalon {
+      object-fit: contain;
+      height: 500px;
+    }
+
+
+    #navigasi {
+      position: fixed;
       right: 0;
       left: 0;
       bottom: 1%;
       z-index: 5;
     }
-    .tombol{
-      font-size: 250%; 
+
+    .tombol {
+      font-size: 250%;
       /* border-radius: 80px;  */
-      height: 100%; 
-      background-color:#E9EDC9; 
-    }
-    .jaraktombolkiri{
-      margin-right: 25%;
-    }
-    .jaraktombolkanan{
-      margin-left: 25%;
+      height: 100%;
+      background-color: #E9EDC9;
     }
 
+    .jaraktombolkiri {
+      margin-right: 25%;
+    }
+
+    .jaraktombolkanan {
+      margin-left: 25%;
+    }
   </style>
 </head>
 
 <body>
-    <!-- Tombol navigasi  -->
-    <div id="navigasi">
-      <div class="row" style="height: 50%;">
-        <div class="col-6 borderhitam is-center">
-          <a href="https://google.com" target="_blank" id="videoprofil" type="button" class="button icon is-full-width is-center tombol jaraktombolkiri">
-            Video Profil&nbsp;
-            <img src="https://icongr.am/entypo/video.svg?size=128&color=3f4144" alt="icon">
-          </a>
-        </div>
-        <div class="col bordermerah is-center">
-          <button type="button" class="button icon is-full-width is-center tombol jaraktombolkanan"
-            onclick="document.getElementById('popupbiodata').style.display='block'">
-            Profil Personal&nbsp;
-            <img src="https://icongr.am/entypo/v-card.svg?size=128&color=3f4144" alt="icon">
-          </button>
-        </div>
+  <!-- Tombol navigasi  -->
+  <div id="navigasi">
+    <div class="row" style="height: 50%;">
+      <div class="col-6 borderhitam is-center">
+        <a href="https://google.com" target="_blank" id="videoprofil" type="button"
+          class="button icon is-full-width is-center tombol jaraktombolkiri">
+          Video Profil&nbsp;
+          <img src="https://icongr.am/entypo/video.svg?size=128&color=3f4144" alt="icon">
+        </a>
       </div>
-      <div class="row" style="height: 50%;">
-        <div class="col-6 borderhitam is-center">
-          <a href="#" target="_blank" id="situsresmi" type="button" class="button icon is-full-width is-center tombol jaraktombolkiri">
-            Situs Resmi&nbsp;
-            <img src="https://icongr.am/entypo/globe.svg?size=128&color=3f4144" alt="icon">
-          </a>
-        </div>
-        <div class="col bordermerah is-center">
-          <button type="button" class="button icon is-full-width is-center tombol jaraktombolkanan"
-            onclick="document.getElementById('popupvisimisi').style.display='block' ">Visi & Misi&nbsp;
-            <img src="https://icongr.am/fontawesome/lightbulb-o.svg?size=128&color=3f4144" alt="icon">
-          </button>
-        </div>
+      <div class="col bordermerah is-center">
+        <button type="button" class="button icon is-full-width is-center tombol jaraktombolkanan"
+          onclick="document.getElementById('popupbiodata').style.display='block'">
+          Profil Personal&nbsp;
+          <img src="https://icongr.am/entypo/v-card.svg?size=128&color=3f4144" alt="icon">
+        </button>
       </div>
     </div>
-    <!-- Tombol Navigasi End -->
+    <div class="row" style="height: 50%;">
+      <div class="col-6 borderhitam is-center">
+        <a href="#" target="_blank" id="situsresmi" type="button"
+          class="button icon is-full-width is-center tombol jaraktombolkiri">
+          Situs Resmi&nbsp;
+          <img src="https://icongr.am/entypo/globe.svg?size=128&color=3f4144" alt="icon">
+        </a>
+      </div>
+      <div class="col bordermerah is-center">
+        <button type="button" class="button icon is-full-width is-center tombol jaraktombolkanan"
+          onclick="document.getElementById('popupvisimisi').style.display='block' ">Visi & Misi&nbsp;
+          <img src="https://icongr.am/fontawesome/lightbulb-o.svg?size=128&color=3f4144" alt="icon">
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Tombol Navigasi End -->
+
+
+  <!-- Plane Yang Merekat Pada Marker -->
   <div id="container">
   </div>
   <div id="plane" class="borderhijau">
-  </div>>
+    
+    <!-- Logo -->
+    <div class="is-center">
+      <img id="logocalon" class="logocalon" src="">
+    </div>
+
+    <!-- Slideshow -->
+    <div class="w3-content" style="max-width:1600px">
+      <img id="gambarshow1" class="mySlides" src="./resources/calon1kampanye1.jpg" style="width:100%;display:none">
+      <img id="gambarshow2" class="mySlides" src="./resources/calon1kampanye2.jpg" style="width:100%">
+      <img id="gambarshow3" class="mySlides" src="./resources/calon1kampanye3.jpg" style="width:100%;display:none">
+
+      <div class="w3-row-padding w3-section">
+        <div class="w3-col s4">
+          <img id="gambarkecilshow1" class="demo w3-opacity w3-hover-opacity-off" src="./resources/calon1kampanye1.jpg" style="width:100%;cursor:pointer"
+            onclick="currentDiv(1)">
+        </div>
+        <div class="w3-col s4">
+          <img id="gambarkecilshow2" class="demo w3-opacity w3-hover-opacity-off" src="./resources/calon1kampanye2.jpg" style="width:100%;cursor:pointer"
+            onclick="currentDiv(2)">
+        </div>
+        <div class="w3-col s4">
+          <img id="gambarkecilshow3" class="demo w3-opacity w3-hover-opacity-off" src="./resources/calon1kampanye3.jpg"
+            style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
-    <!-- POP UP VISI MISI -->
+  <!-- POP UP VISI MISI -->
   <div id="popupvisimisi" class="popup">
     <!-- The pop-up content -->
     <div class="popup-content ">
@@ -242,8 +285,30 @@
       </ol>
     </div>
   </div>
-  
+
   </div>
 </body>
+
+<script>
+  function currentDiv(n) {
+    showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = x.length }
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+    }
+    x[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " w3-opacity-off";
+}
+</script>
 
 </html>

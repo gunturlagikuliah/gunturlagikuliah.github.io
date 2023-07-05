@@ -6,7 +6,7 @@ import data from './data.json' assert {type: "json"};
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
-        mockWithVideo('./ignore/pasangan2.mp4');
+        // mockWithVideo('./ignore/pasangan2.mp4');
         const mindarThree = new MindARThree({
             container: document.body,
             imageTargetSrc: data.mindtarget,
@@ -28,6 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(i);
             anchor[i].onTargetFound = () => {
                 console.log(`TARGET ${i} FOUND`);
+
+                //LOGO
+                document.getElementById('logocalon').src=data.calon[i].logokampanye;
+
+                //Shildshow
+                document.getElementById('gambarshow1').src=data.calon[i].fotokampanye[0];
+                document.getElementById('gambarshow2').src=data.calon[i].fotokampanye[1];
+                document.getElementById('gambarshow3').src=data.calon[i].fotokampanye[2];
+
+
                 // LINK
                 document.getElementById('videoprofil').href = data.calon[i].youtube;
                 document.getElementById('situsresmi').href = data.calon[i].web;
