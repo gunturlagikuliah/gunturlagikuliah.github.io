@@ -6,7 +6,7 @@ import data from './data.json' assert {type: "json"};
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
-        mockWithVideo('./ignore/pasangan0.mp4');
+        // mockWithVideo('./ignore/pasangan0.mp4');
         const mindarThree = new MindARThree({
             container: document.body,
             imageTargetSrc: data.mindtarget,
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const anchor = [];
         const pageObject = new CSS3DObject(document.getElementById('plane'));
-        pageObject.position.set(0,500,0);
+        // pageObject.position.set(0,500,0);
         for (let i = 0; i < data.calon.length; i++) {
             console.log(i);
             anchor[i] = mindarThree.addCSSAnchor(i);
@@ -37,13 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('logocalon').src=data.calon[i].logokampanye;
 
                 //Shildshow
-                document.getElementById('gambarshow1').src=data.calon[i].fotokampanye[0];
-                document.getElementById('gambarshow2').src=data.calon[i].fotokampanye[1];
-                document.getElementById('gambarshow3').src=data.calon[i].fotokampanye[2];
+                // document.getElementById('gambarshow1').src=data.calon[i].fotokampanye[0];
+                // document.getElementById('gambarshow2').src=data.calon[i].fotokampanye[1];
+                // document.getElementById('gambarshow3').src=data.calon[i].fotokampanye[2];
 
-                document.getElementById('gambarkecilshow1').src=data.calon[i].fotokampanye[0];
-                document.getElementById('gambarkecilshow2').src=data.calon[i].fotokampanye[1];
-                document.getElementById('gambarkecilshow3').src=data.calon[i].fotokampanye[2];
+                // document.getElementById('gambarkecilshow1').src=data.calon[i].fotokampanye[0];
+                // document.getElementById('gambarkecilshow2').src=data.calon[i].fotokampanye[1];
+                // document.getElementById('gambarkecilshow3').src=data.calon[i].fotokampanye[2];
 
 
                 // LINK
