@@ -6,7 +6,7 @@ import data from './data.json' assert {type: "json"};
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
-        // mockWithVideo('./ignore/videotest.mp4');
+        // mockWithVideo('./ignore/pasangan0.mp4');
         const mindarThree = new MindARThree({
             container: document.body,
             imageTargetSrc: data.mindtarget,
@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const { renderer, cssRenderer, scene, cssScene, camera } = mindarThree;
 
         const anchor = [];
-        const pageObject = new CSS3DObject(document.getElementById('plane'))
+        const pageObject = new CSS3DObject(document.getElementById('plane'));
+        pageObject.position.set(0,500,0);
         for (let i = 0; i < data.calon.length; i++) {
             console.log(i);
             anchor[i] = mindarThree.addCSSAnchor(i);
@@ -28,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(i);
             anchor[i].onTargetFound = () => {
                 console.log(`TARGET ${i} FOUND`);
+                // LOGO
+                document.getElementById('logocalon').src = data.calon[i].logokampanye;
+
                 // LINK
                 document.getElementById('videoprofil').href = data.calon[i].youtube;
                 document.getElementById('situsresmi').href = data.calon[i].web;
