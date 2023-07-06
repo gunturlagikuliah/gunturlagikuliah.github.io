@@ -31,7 +31,7 @@
     }
 
     /* FIX CSS w3school */
-    h4{
+    h4 {
       font-size: 120%;
     }
 
@@ -163,12 +163,12 @@
     }
 
     /* FIX content resize */
-    .w3-content > img{
+    .w3-content>img {
       height: 1000px;
       object-fit: contain;
     }
 
-    .w3-col > img {
+    .w3-col>img {
       height: 300px;
       object-fit: contain;
     }
@@ -180,11 +180,12 @@
   <div id="navigasi">
     <div class="row" style="height: 50%;">
       <div class="col-6 borderhitam is-center">
-        <a href="https://google.com" target="_blank" id="videoprofil" type="button"
-          class="button icon is-full-width is-center tombol jaraktombolkiri">
+        <button id="videoprofil" type="button"
+          class="button icon is-full-width is-center tombol jaraktombolkiri"
+          onclick="document.getElementById('popupyt').style.display='block'">
           Video Profil&nbsp;
           <img src="https://icongr.am/entypo/video.svg?size=128&color=3f4144" alt="icon">
-        </a>
+        </button>
       </div>
       <div class="col bordermerah is-center">
         <button type="button" class="button icon is-full-width is-center tombol jaraktombolkanan"
@@ -217,7 +218,7 @@
   <div id="container">
   </div>
   <div id="plane" class="borderhijau">
-    
+
     <!-- Logo -->
     <div class="is-center">
       <img id="logocalon" class="logocalon" src="">
@@ -231,12 +232,12 @@
 
       <div class="w3-row-padding w3-section">
         <div class="w3-col s4">
-          <img id="gambarkecilshow1" class="demo w3-opacity w3-hover-opacity-off" src="./resources/calon1kampanye1.jpg" style="width:100%;cursor:pointer"
-            onclick="currentDiv(1)">
+          <img id="gambarkecilshow1" class="demo w3-opacity w3-hover-opacity-off" src="./resources/calon1kampanye1.jpg"
+            style="width:100%;cursor:pointer" onclick="currentDiv(1)">
         </div>
         <div class="w3-col s4">
-          <img id="gambarkecilshow2" class="demo w3-opacity w3-hover-opacity-off" src="./resources/calon1kampanye2.jpg" style="width:100%;cursor:pointer"
-            onclick="currentDiv(2)">
+          <img id="gambarkecilshow2" class="demo w3-opacity w3-hover-opacity-off" src="./resources/calon1kampanye2.jpg"
+            style="width:100%;cursor:pointer" onclick="currentDiv(2)">
         </div>
         <div class="w3-col s4">
           <img id="gambarkecilshow3" class="demo w3-opacity w3-hover-opacity-off" src="./resources/calon1kampanye3.jpg"
@@ -261,6 +262,21 @@
       <h4 class="text-center">MISI</h4>
       <ol id="misi" class="text-justify">
       </ol>
+    </div>
+  </div>
+
+  <!-- POP UP Youtube -->
+  <div id="popupyt" class="popup">
+    <!-- The pop-up content -->
+    <div class="popup-content">
+      <button class="close" onclick="document.getElementById('popupyt').style.display='none' ">&times;</button>
+      <br>
+      <!-- Youtube -->
+      <div class="is-center">
+        <iframe id="youtube" class="is-full-width" height="1500" src="https://www.youtube.com/embed/" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 
@@ -309,23 +325,23 @@
 <script>
   function currentDiv(n) {
     showDivs(slideIndex = n);
-}
+  }
 
-function showDivs(n) {
+  function showDivs(n) {
     var i;
     var x = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("demo");
     if (n > x.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = x.length }
     for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+      x[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+      dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
     }
     x[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " w3-opacity-off";
-}
+  }
 </script>
 
 </html>

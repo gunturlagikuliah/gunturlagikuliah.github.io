@@ -6,7 +6,7 @@ import data from './data.json' assert {type: "json"};
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
-        mockWithVideo('./ignore/pasangan1.mp4');
+        // mockWithVideo('./ignore/pasangan0.mp4');
         const mindarThree = new MindARThree({
             container: document.body,
             imageTargetSrc: data.mindtarget,
@@ -47,7 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
                 // LINK
-                document.getElementById('videoprofil').href = data.calon[i].youtube;
+                document.getElementById('youtube').src=`https://www.youtube.com/embed/${data.calon[i].youtube.slice(32)}`;
+                // document.getElementById('videoprofil').href = data.calon[i].youtube;
                 document.getElementById('situsresmi').href = data.calon[i].web;
 
                 // VISI MISI
