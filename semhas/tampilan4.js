@@ -6,7 +6,7 @@ import data from './data.json' assert {type: "json"};
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
-        // mockWithVideo('./ignore/pasangan1.mp4');
+        mockWithVideo('./ignore/pasangan1.mp4');
         const mindarThree = new MindARThree({
             container: document.body,
             imageTargetSrc: data.mindtarget,
@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const anchor = [];
         const pageObject = new CSS3DObject(document.getElementById('plane'));
+        pageObject.position.set(0,500,0);
         for (let i = 0; i < data.calon.length; i++) {
             console.log(i);
             anchor[i] = mindarThree.addCSSAnchor(i);
