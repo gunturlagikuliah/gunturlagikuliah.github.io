@@ -1,0 +1,342 @@
+
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "mindtarget": {
+        "type": "string"
+      },
+      "calon": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "visi": {
+                "type": "string"
+              },
+              "misi": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "youtube": {
+                "type": "string"
+              },
+              "web": {
+                "type": "string"
+              },
+              "logokampanye": {
+                "type": "string"
+              },
+              "calonkepala": {
+                "type": "object",
+                "properties": {
+                  "nama": {
+                    "type": "string"
+                  },
+                  "foto": {
+                    "type": "string"
+                  },
+                  "tanggallahir": {
+                    "type": "string"
+                  },
+                  "tempatlahir": {
+                    "type": "string"
+                  },
+                  "partaiasal": {
+                    "type": "object",
+                    "properties": {
+                      "namapartai": {
+                        "type": "string"
+                      },
+                      "gambarpartai": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "namapartai",
+                      "gambarpartai"
+                    ]
+                  },
+                  "sorotan": {
+                    "type": "array",
+                    "items": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "nama",
+                  "foto",
+                  "tanggallahir",
+                  "tempatlahir",
+                  "partaiasal",
+                  "sorotan"
+                ]
+              },
+              "calonwakil": {
+                "type": "object",
+                "properties": {
+                  "nama": {
+                    "type": "string"
+                  },
+                  "foto": {
+                    "type": "string"
+                  },
+                  "tanggallahir": {
+                    "type": "string"
+                  },
+                  "tempatlahir": {
+                    "type": "string"
+                  },
+                  "partaiasal": {
+                    "type": "object",
+                    "properties": {
+                      "namapartai": {
+                        "type": "string"
+                      },
+                      "gambarpartai": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "namapartai",
+                      "gambarpartai"
+                    ]
+                  },
+                  "sorotan": {
+                    "type": "array",
+                    "items": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "nama",
+                  "foto",
+                  "tanggallahir",
+                  "tempatlahir",
+                  "partaiasal",
+                  "sorotan"
+                ]
+              }
+            },
+            "required": [
+              "visi",
+              "misi",
+              "youtube",
+              "web",
+              "logokampanye",
+              "calonkepala",
+              "calonwakil"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "visi": {
+                "type": "string"
+              },
+              "misi": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "youtube": {
+                "type": "string"
+              },
+              "web": {
+                "type": "string"
+              },
+              "logokampanye": {
+                "type": "string"
+              },
+              "calonkepala": {
+                "type": "object",
+                "properties": {
+                  "nama": {
+                    "type": "string"
+                  },
+                  "foto": {
+                    "type": "string"
+                  },
+                  "tanggallahir": {
+                    "type": "string"
+                  },
+                  "tempatlahir": {
+                    "type": "string"
+                  },
+                  "partaiasal": {
+                    "type": "object",
+                    "properties": {
+                      "namapartai": {
+                        "type": "string"
+                      },
+                      "gambarpartai": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "namapartai",
+                      "gambarpartai"
+                    ]
+                  },
+                  "sorotan": {
+                    "type": "array",
+                    "items": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "nama",
+                  "foto",
+                  "tanggallahir",
+                  "tempatlahir",
+                  "partaiasal",
+                  "sorotan"
+                ]
+              },
+              "calonwakil": {
+                "type": "object",
+                "properties": {
+                  "nama": {
+                    "type": "string"
+                  },
+                  "foto": {
+                    "type": "string"
+                  },
+                  "tanggallahir": {
+                    "type": "string"
+                  },
+                  "tempatlahir": {
+                    "type": "string"
+                  },
+                  "partaiasal": {
+                    "type": "object",
+                    "properties": {
+                      "namapartai": {
+                        "type": "string"
+                      },
+                      "gambarpartai": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "namapartai",
+                      "gambarpartai"
+                    ]
+                  },
+                  "sorotan": {
+                    "type": "array",
+                    "items": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "nama",
+                  "foto",
+                  "tanggallahir",
+                  "tempatlahir",
+                  "partaiasal",
+                  "sorotan"
+                ]
+              }
+            },
+            "required": [
+              "visi",
+              "misi",
+              "youtube",
+              "web",
+              "logokampanye",
+              "calonkepala",
+              "calonwakil"
+            ]
+          }
+        ]
+      }
+    },
+    "required": [
+      "mindtarget",
+      "calon"
+    ]
+  }
+  
+  

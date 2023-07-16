@@ -1,0 +1,40 @@
+{
+    "mindtarget": "String",
+    "calon": [
+        {
+            "visi": "String",
+            "misi": [
+                "String"
+            ],
+            "youtube": "String",
+            "web": "String",
+            "logokampanye": "String",
+            "calonkepala": {
+                "nama": "String",
+                "foto": "String",
+                "tanggallahir": "String",
+                "tempatlahir": "String",
+                "partaiasal": {
+                    "namapartai": "String",
+                    "gambarpartai": "String"
+                },
+                "sorotan": [
+                    "String"
+                ]
+            },
+            "calonwakil": {
+                "nama": "String",
+                "foto": "String",
+                "tanggallahir": "String",
+                "tempatlahir": "String",
+                "partaiasal": {
+                    "namapartai": "String",
+                    "gambarpartai": "String"
+                },
+                "sorotan": [
+                    "String"
+                ]
+            }
+        }
+    ]
+}

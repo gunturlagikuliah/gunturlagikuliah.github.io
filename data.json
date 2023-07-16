@@ -16,39 +16,7 @@
             ],
             "youtube": "https://www.youtube.com/watch?v=tB6FWoGKOSs",
             "web": "https://id.wikipedia.org/wiki/Kampanye_Joko_Widodo-Ma%27ruf_Amin_dalam_pemilihan_umum_Presiden_Indonesia_2019",
-            "poster": "./resources/pasangan1mid.jpg",
             "logokampanye": "./resources/logocalon1.png",
-            "fotokampanye": [
-                "./resources/calon1kampanye1.jpg",
-                "./resources/calon1kampanye2.jpg",
-                "./resources/calon1kampanye3.jpg"
-            ],
-            "partaipengusung": [
-                {
-                    "namapartai": "PDIP",
-                    "gambarpartai": "./resources/partai/pdip.png"
-                },
-                {
-                    "namapartai": "GOLKAR",
-                    "gambarpartai": "./resources/partai/golkar.png"
-                },
-                {
-                    "namapartai": "NASDEM",
-                    "gambarpartai": "./resources/partai/nasdem.png"
-                },
-                {
-                    "namapartai": "PPP",
-                    "gambarpartai": "./resources/partai/ppp.png"
-                },
-                {
-                    "namapartai": "HANURA",
-                    "gambarpartai": "./resources/partai/hanura.png"
-                },
-                {
-                    "namapartai": "PKPI",
-                    "gambarpartai": "./resources/partai/pkpi.png"
-                }
-            ],
             "calonkepala": {
                 "nama": "Ir. H. JOKO WIDODO",
                 "foto": "./resources/foto/jokowi.jpg",
@@ -91,31 +59,7 @@
             ],
             "youtube": "https://www.youtube.com/watch?v=jLv4xVU_Nk0",
             "web": "https://id.wikipedia.org/wiki/Kampanye_Prabowo_Subianto-Sandiaga_Uno_dalam_pemilihan_umum_Presiden_Indonesia_2019",
-            "poster": "./resources/pasangan2mid.jpg",
             "logokampanye": "./resources/logocalon2.png",
-            "fotokampanye": [
-                "./resources/calon2kampanye1.jpg",
-                "./resources/calon2kampanye2.jpg",
-                "./resources/calon2kampanye3.jpg"
-            ],
-            "partaipengusung": [
-                {
-                    "namapartai": "GERINDRA",
-                    "gambarpartai": "./resources/partai/gerindra.png"
-                },
-                {
-                    "namapartai": "PKS",
-                    "gambarpartai": "./resources/partai/pks.png"
-                },
-                {
-                    "namapartai": "PAN",
-                    "gambarpartai": "./resources/partai/pan.png"
-                },
-                {
-                    "namapartai": "DEMOKRAT",
-                    "gambarpartai": "./resources/partai/demokrat.png"
-                }
-            ],
             "calonkepala": {
                 "nama": "H. PRABOWO SUBIANTO",
                 "foto": "./resources/foto/prabowo.webp",
