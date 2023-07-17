@@ -19,13 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const pageObject = new CSS3DObject(document.getElementById('plane'));
 
         for (let i = 0; i < data.calon.length; i++) {
-            console.log(i);
             anchor[i] = mindarThree.addCSSAnchor(i);
 
         }
         for (let i = 0; i < data.calon.length; i++) {
-            console.log('loop2')
-            console.log(i);
             anchor[i].onTargetFound = () => {
                 console.log(`TARGET ${i} FOUND`);
                 //DATA
