@@ -1,4 +1,3 @@
-// import * as THREE from 'three';
 import { MindARThree } from 'mindar-image-three';
 import { mockWithVideo } from './container-mock.js';
 import { CSS3DObject } from 'three/addons/renderers/CSS3DRenderer.js';
@@ -18,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const anchor = [];
         const pageObject = new CSS3DObject(document.getElementById('plane'));
-        // pageObject.position.set(0,500,0);
+
         for (let i = 0; i < data.calon.length; i++) {
             console.log(i);
             anchor[i] = mindarThree.addCSSAnchor(i);
@@ -32,25 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 //DATA
                 let dataCalon = data.calon[i];
 
-                //Button
+                //Menu
                 document.getElementById('navigasi').style.display="block";
 
                 //LOGO
                 document.getElementById('logocalon').src=dataCalon.logokampanye;
 
-                //Shildshow
-                // document.getElementById('gambarshow1').src=dataCalon.fotokampanye[0];
-                // document.getElementById('gambarshow2').src=dataCalon.fotokampanye[1];
-                // document.getElementById('gambarshow3').src=dataCalon.fotokampanye[2];
-
-                // document.getElementById('gambarkecilshow1').src=dataCalon.fotokampanye[0];
-                // document.getElementById('gambarkecilshow2').src=dataCalon.fotokampanye[1];
-                // document.getElementById('gambarkecilshow3').src=dataCalon.fotokampanye[2];
-
-
                 // LINK
                 document.getElementById('youtube').src=`https://www.youtube.com/embed/${dataCalon.youtube.slice(32)}`;
-                // document.getElementById('videoprofil').href = dataCalon.youtube;
                 document.getElementById('situsresmi').href = dataCalon.web;
 
                 // VISI MISI
@@ -86,9 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             anchor[i].onTargetLost = () => {
                 console.log(`TARGET ${i} LOST`);
-                
-                //Button
-                // document.getElementById('navigasi').style.display="none";
             }
         }
 
