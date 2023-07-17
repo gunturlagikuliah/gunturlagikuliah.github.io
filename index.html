@@ -16,6 +16,7 @@
   <script src="./main.js" type="module"></script>
   <link rel="stylesheet" href="./libs/offline/css/chota.min.css">
   <link href='./libs/offline/font/fontaleo.css' rel='stylesheet'>
+  <link rel="stylesheet" href="./scan.css">
   <style>
     html,
     body {
@@ -164,20 +165,27 @@
       position: absolute;
     }
 
-    /* FIX content resize */
-    .w3-content>img {
-      height: 900px;
-      object-fit: contain;
-    }
-
-    .w3-col>img {
-      height: 250px;
-      object-fit: contain;
+    .petunjuk {
+      position: fixed;
+      background-color: black;
+      color: white;
+      font-size: 300%;
     }
   </style>
 </head>
 
 <body>
+  <!-- Halaman Scanning -->
+  <div id="scanning" class="hidden">
+    <div class="inner">
+      <img src="./resources/Dummy.png" />
+      <div class="scanline"></div>
+    </div>
+    <div class="petunjuk text-center">
+      Arahkan kamera ke <br>poster calon kepala daerah!
+    </div>
+  </div>
+
   <!-- Tombol navigasi  -->
   <div id="navigasi">
     <!-- Tombol Close -->
@@ -312,7 +320,7 @@
 </body>
 
 <script>
- 
+
 </script>
 
 </html>

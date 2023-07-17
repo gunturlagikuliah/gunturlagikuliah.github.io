@@ -5,9 +5,11 @@ import data from './data.json' assert {type: "json"};
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
-        mockWithVideo('./semhas/ignore/pasangan0.mp4');
+        // mockWithVideo('./semhas/ignore/pasangan0.mp4');
+        mockWithVideo('./demo/calon2.mp4');
         const mindarThree = new MindARThree({
             container: document.body,
+            uiScanning: '#scanning',
             imageTargetSrc: data.mindtarget,
             maxTrack: 1,
             filterMinCF: 0.0001,
