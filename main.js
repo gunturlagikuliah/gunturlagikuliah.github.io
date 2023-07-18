@@ -5,7 +5,7 @@ import data from './data.json' assert {type: "json"};
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
-        mockWithVideo('./semhas/ignore/pasangan0.mp4');
+        // mockWithVideo('./semhas/ignore/pasangan0.mp4');
         // mockWithVideo('./demo/calon2.mp4');
         const mindarThree = new MindARThree({
             container: document.body,
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('iconlogo').src=dataCalon.logokampanye;
 
                 // LINK
-                document.getElementById('youtube').src=`https://www.youtube.com/embed/${dataCalon.youtube.slice(32)}`;
+                document.getElementById('youtube').src=`https://www.youtube.com/embed/${dataCalon.youtube.slice(32)}?enablejsapi=1`;
                 document.getElementById('situsresmi').href = dataCalon.web;
 
                 // VISI MISI
