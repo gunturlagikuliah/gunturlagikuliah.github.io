@@ -16,15 +16,15 @@
             ],
             "youtube": "https://www.youtube.com/watch?v=tB6FWoGKOSs",
             "web": "https://id.wikipedia.org/wiki/Kampanye_Joko_Widodo-Ma%27ruf_Amin_dalam_pemilihan_umum_Presiden_Indonesia_2019",
-            "logokampanye": "./resources/logocalon1.png",
+            "logokampanye": "./resources/webp/logocalon1.webp",
             "calonkepala": {
                 "nama": "Ir. H. JOKO WIDODO",
-                "foto": "./resources/foto/jokowi.jpg",
+                "foto": "./resources/webp/foto/jokowi.webp",
                 "tanggallahir": "21 Juni 1961",
                 "tempatlahir": "Surakarta",
                 "partaiasal": {
                     "namapartai": "PDIP",
-                    "gambarpartai": "./resources/partai/pdip.png"
+                    "gambarpartai": "./resources/webp/partai/pdip.webp"
                 },
                 "sorotan": [
                     "Walikota Surakarta (2005-2012)",
@@ -34,12 +34,12 @@
             },
             "calonwakil": {
                 "nama": "Prof. Dr. (HC). KH. MA'RUF AMIN",
-                "foto": "./resources/foto/maruf.jpg",
+                "foto": "./resources/webp/foto/maruf.webp",
                 "tanggallahir": "11 Maret 1943",
                 "tempatlahir": "Tangerang",
                 "partaiasal": {
                     "namapartai": "Independen",
-                    "gambarpartai": "./resources/partai/independen.png"
+                    "gambarpartai": "./resources/webp/partai/independen.webp"
                 },
                 "sorotan": [
                     "Pimpinan Pusat Nahdlatul Ulama (2015-2018) ",
@@ -59,15 +59,15 @@
             ],
             "youtube": "https://www.youtube.com/watch?v=jLv4xVU_Nk0",
             "web": "https://id.wikipedia.org/wiki/Kampanye_Prabowo_Subianto-Sandiaga_Uno_dalam_pemilihan_umum_Presiden_Indonesia_2019",
-            "logokampanye": "./resources/logocalon2.png",
+            "logokampanye": "./resources/webp/logocalon2.webp",
             "calonkepala": {
                 "nama": "H. PRABOWO SUBIANTO",
-                "foto": "./resources/foto/prabowo.webp",
+                "foto": "./resources/webp/foto/prabowo.webp",
                 "tanggallahir": "17 Oktober 1951",
                 "tempatlahir": "Jakarta",
                 "partaiasal": {
                     "namapartai": "GERINDRA",
-                    "gambarpartai": "./resources/partai/gerindra.png"
+                    "gambarpartai": "./resources/webp/partai/gerindra.webp"
                 },
                 "sorotan": [
                     "Danjen Kopassus (1996-1998)",
@@ -77,12 +77,12 @@
             },
             "calonwakil": {
                 "nama": "SANDIAGA SALAHUDDIN UNO, MBA",
-                "foto": "./resources/foto/sandi.jpg",
+                "foto": "./resources/webp/foto/sandi.webp",
                 "tanggallahir": "28 Juni 1969",
                 "tempatlahir": "Pekanbaru",
                 "partaiasal": {
                     "namapartai": "Independen",
-                    "gambarpartai": "./resources/partai/independen.png"
+                    "gambarpartai": "./resources/webp/partai/independen.webp"
                 },
                 "sorotan": [
                     "Wakil Gubernur Jakarta (2017-2018) ",
