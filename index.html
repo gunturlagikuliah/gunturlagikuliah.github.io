@@ -104,6 +104,10 @@
       border-radius: 2%;
     }
 
+    .popup-scroll {
+      padding-top: 5%;
+    }
+
     /* Style for the close button */
     .close {
       color: #000000;
@@ -271,13 +275,15 @@
     <div class="popup-content ">
       <button class="close" onclick="document.getElementById('popupvisimisi').style.display='none' ">&times;</button>
       <br>
-      <h4 class="text-center">VISI</h4>
-      <p id="visi" class="text-justify">
-        Lorem Ipsum
-      </p>
-      <h4 class="text-center">MISI</h4>
-      <ol id="misi" class="text-justify">
-      </ol>
+      <div class="popup-scroll">
+        <h4 class="text-center">VISI</h4>
+        <p id="visi" class="text-justify">
+          Lorem Ipsum
+        </p>
+        <h4 class="text-center">MISI</h4>
+        <ol id="misi" class="text-justify">
+        </ol>
+      </div>
     </div>
   </div>
 
@@ -287,11 +293,13 @@
     <div class="popup-content">
       <button class="close" onclick="tutupPopUp();">&times;</button>
       <br>
-      <!-- Youtube -->
-      <div class="is-center">
-        <iframe id="youtube" class="is-full-width" height="1500" src="https://www.youtube.com/embed/" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
+      <div class="popup-scroll">
+        <!-- Youtube -->
+        <div class="is-center">
+          <iframe id="youtube" class="is-full-width" height="1500" src="https://www.youtube.com/embed/" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -303,35 +311,37 @@
     <div class="popup-content ">
       <button class="close" onclick="document.getElementById('popupbiodata').style.display='none' ">&times;</button>
       <br>
-      <h4 id="nomorkepala" class="text-center text-bold">Lorem Ipsum</h4>
-      <div class="is-center">
-        <img id="fotocalonkepala" class="foto" src="" alt="">
+      <div class="popup-scroll">
+        <h4 id="nomorkepala" class="text-center text-bold">Lorem Ipsum</h4>
+        <div class="is-center">
+          <img id="fotocalonkepala" class="foto" src="" alt="">
+        </div>
+        <h4 id="namakepala" class="text-center"></h4>
+        <div id="ttlkepala" class="text-center">
+          indramayu, 30 Agustus 2023<br>
+        </div>
+        <div class="is-center">
+          <img id="fotopartaikepala" class="fotopartai" src="">
+        </div>
+        <br>
+        <h4 class="text-center">SOROTAN UTAMA</h4>
+        <ol id="sorotankepala" class="text-justify" style="position: relative; margin-left: 10%;">
+        </ol>
+        <h4 id="nomorwakil" class="text-center text-bold"><b>CALON WAKIL PRESIDEN RI NO. 01</b></h4>
+        <div class="is-center">
+          <img id="fotocalonwakil" class="foto" src="./resources/foto/sandi.jpg" alt="">
+        </div>
+        <h4 id="namawakil" class="text-center">SANDIAGA UNO</h4>
+        <div id="ttlwakil" class="text-center">
+        </div>
+        <div class="is-center">
+          <img id="fotopartaiwakil" class="fotopartai" src="">
+        </div>
+        <br>
+        <h4 class="text-center">SOROTAN UTAMA</h4>
+        <ol id="sorotanwakil" class="text-justify" style="position: relative; margin-left: 10%;">
+        </ol>
       </div>
-      <h4 id="namakepala" class="text-center"></h4>
-      <div id="ttlkepala" class="text-center">
-        indramayu, 30 Agustus 2023<br>
-      </div>
-      <div class="is-center">
-        <img id="fotopartaikepala" class="fotopartai" src="">
-      </div>
-      <br>
-      <h4 class="text-center">SOROTAN UTAMA</h4>
-      <ol id="sorotankepala" class="text-justify" style="position: relative; margin-left: 10%;">
-      </ol>
-      <h4 id="nomorwakil" class="text-center text-bold"><b>CALON WAKIL PRESIDEN RI NO. 01</b></h4>
-      <div class="is-center">
-        <img id="fotocalonwakil" class="foto" src="./resources/foto/sandi.jpg" alt="">
-      </div>
-      <h4 id="namawakil" class="text-center">SANDIAGA UNO</h4>
-      <div id="ttlwakil" class="text-center">
-      </div>
-      <div class="is-center">
-        <img id="fotopartaiwakil" class="fotopartai" src="">
-      </div>
-      <br>
-      <h4 class="text-center">SOROTAN UTAMA</h4>
-      <ol id="sorotanwakil" class="text-justify" style="position: relative; margin-left: 10%;">
-      </ol>
     </div>
   </div>
 
