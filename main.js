@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 //LOGO
                 document.getElementById('logocalon').src=dataCalon.logokampanye;
+                document.getElementById('iconlogo').src=dataCalon.logokampanye;
 
                 // LINK
                 document.getElementById('youtube').src=`https://www.youtube.com/embed/${dataCalon.youtube.slice(32)}`;

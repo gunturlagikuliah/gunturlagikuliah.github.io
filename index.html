@@ -162,19 +162,26 @@
       margin-left: 25%;
     }
 
-    .tomboltutupnavigasi {
-      position: absolute;
-    }
 
     .petunjuk {
       position: absolute;
       background-color: rgba(0, 0, 0, 0.3);
       color: white;
       font-size: 6ex;
-      top: 110%;
+      top: -35%;
       padding: 20px;
       border-radius: 4%;
-      
+
+    }
+
+    .iconlogo {
+      position: absolute;
+      top:-10%
+    }
+
+    #iconlogo {
+      object-fit: contain;
+      height: 80px;
     }
   </style>
 </head>
@@ -194,6 +201,10 @@
 
   <!-- Tombol navigasi  -->
   <div id="navigasi">
+    <!-- Icon logo -->
+    <div class="is-left iconlogo">
+      <img id="iconlogo">
+    </div>
     <!-- Tombol Close -->
     <div id="tombolclose" class="is-right">
       <button id="videoprofil" type="button" class="button"
@@ -201,6 +212,7 @@
         X
       </button>
     </div>
+    <!-- Menu -->
     <div class="row" style="height: 50%;">
       <div class="col-6 borderhitam is-center">
         <button id="videoprofil" type="button" class="button icon is-full-width is-center tombol jaraktombolkiri"
