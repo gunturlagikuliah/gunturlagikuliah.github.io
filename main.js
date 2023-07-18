@@ -1,5 +1,5 @@
 import { MindARThree } from 'mindar-image-three';
-import { mockWithVideo } from './container-mock.js';
+// import { mockWithVideo } from './container-mock.js';
 import { CSS3DObject } from 'three/addons/renderers/CSS3DRenderer.js';
 import data from './data.json' assert {type: "json"};
 
