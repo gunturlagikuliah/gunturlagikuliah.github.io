@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const anchor = [];
         const pageObject = new CSS3DObject(document.getElementById('plane'));
+        pageObject.position.set(0,1000,0);
 
         for (let i = 0; i < data.calon.length; i++) {
             anchor[i] = mindarThree.addCSSAnchor(i);
