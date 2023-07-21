@@ -1,0 +1,95 @@
+{
+    "mindtarget": "../marker/targets.mind",
+    "calon": [
+        {
+            "visi": "Terwujudnya Indonesia maju yang berdaulat, mandiri, dan berkepribadian, berlandaskan gotong-royong",
+            "misi": [
+                "Peningkatan kualitas manusia Indonesia.",
+                "Struktur ekonomi yang produktif, mandiri, dan berdaya saing.",
+                "Pembangunan yang merata dan berkeadilan.",
+                "Mencapai lingkungan hidup yang berkelanjutan.",
+                "Kemajuan budaya yang mencerminkan kepribadian bangsa. ",
+                "Penegakan sistem hukum yang bebas korupsi, bermartabat, dan terpercaya. ",
+                "Perlindungan bagi segenap bangsa dan memberikan rasa aman pada seluruh warga. ",
+                "Pengelolaan pemerintahan yang bersih, efektif, dan terpercaya. ",
+                "Sinergi pemerintah daerah dalam kerangka Negara Kesatuan."
+            ],
+            "youtube": "https://www.youtube.com/watch?v=tB6FWoGKOSs",
+            "web": "https://id.wikipedia.org/wiki/Kampanye_Joko_Widodo-Ma%27ruf_Amin_dalam_pemilihan_umum_Presiden_Indonesia_2019",
+            "logokampanye": "../resources/webp/logocalon1.webp",
+            "calonkepala": {
+                "nama": "Ir. H. JOKO WIDODO",
+                "foto": "../resources/webp/foto/jokowi.webp",
+                "tanggallahir": "21 Juni 1961",
+                "tempatlahir": "Surakarta",
+                "partaiasal": {
+                    "namapartai": "PDIP",
+                    "gambarpartai": "../resources/webp/partai/pdip.webp"
+                },
+                "sorotan": [
+                    "Walikota Surakarta (2005-2012)",
+                    "Gubernur Jakarta (2012-2014)",
+                    "Presiden Indonesia (2014-2019)"
+                ]
+            },
+            "calonwakil": {
+                "nama": "Prof. Dr. (HC). KH. MA'RUF AMIN",
+                "foto": "../resources/webp/foto/maruf.webp",
+                "tanggallahir": "11 Maret 1943",
+                "tempatlahir": "Tangerang",
+                "partaiasal": {
+                    "namapartai": "Independen",
+                    "gambarpartai": "../resources/webp/partai/independen.webp"
+                },
+                "sorotan": [
+                    "Pimpinan Pusat Nahdlatul Ulama (2015-2018) ",
+                    "Ketua Majelis Ulama Indonesia (2015-Sekarang) ",
+                    "Pendiri Pondok Pesantren An-Nawawi, Serang, Banten"
+                ]
+            }
+        },
+        {
+            "visi": "Terwujudnya Bangsa dan Negara Republik Indonesia yang adil, makmur bermartabat, relijius, berdaulat di bidang politik, berdiri di atas kaki sendiri di bidang ekonomi, dan berkepribadian nasional yang kuat dibidang budaya serta menjamin kehidupan yang rukun antar warga negara tanpa memandang suku, agama, latar belakang sosial dan rasnya berdasarkan Pancasila dan Undang-Undang Dasar Negara Republik Indonesia Tahun 1945.",
+            "misi": [
+                "Membangun perekonomian nasional yang adil, makmur, berkualitas, dan berwawasan lingkungan dengan mengutamakan kepentingan rakyat Indonesia melalui jalan politik-ekonomi sesuai Pasal 33 dan 34 UUD Negara Republik Indonesia Tahun 1945. ",
+                "Membangun masyarakat Indonesia yang cerdas, sehat, berkualltas, produktif. dan berdaya saing dalam kehidupan yang aman, rukun, damai, dan bermartabat serta terlindungi oleh jaminan sosial yang berkeadilan tanpa diskriminasi. ",
+                "Membangun keadilan dibidang hukum yang tidak tebang pilih dan transparan, serta mewujudkan persatuan dan kesatuan bangsa Indonesia melalui jalan demokrasi yang berkualitas sesuai dengan Pancasila dan UUD Negara Republik Indonesia Tahun 1945. ",
+                "Membangun kembali nilai-nilai luhur kepribadian bangsa untuk mewujudkan Indonesia yang adil, makmur, bermartabat, dan bersahabat, yang diberkati oleh Tuhan Yang Maha Esa. ",
+                "Membangun sistem pertahanan dan keamanan nasional secara mandiri yang mampu menjaga keutuhan dan integritas wilayah Indonesia."
+            ],
+            "youtube": "https://www.youtube.com/watch?v=jLv4xVU_Nk0",
+            "web": "https://id.wikipedia.org/wiki/Kampanye_Prabowo_Subianto-Sandiaga_Uno_dalam_pemilihan_umum_Presiden_Indonesia_2019",
+            "logokampanye": "../resources/webp/logocalon2.webp",
+            "calonkepala": {
+                "nama": "H. PRABOWO SUBIANTO",
+                "foto": "../resources/webp/foto/prabowo.webp",
+                "tanggallahir": "17 Oktober 1951",
+                "tempatlahir": "Jakarta",
+                "partaiasal": {
+                    "namapartai": "GERINDRA",
+                    "gambarpartai": "../resources/webp/partai/gerindra.webp"
+                },
+                "sorotan": [
+                    "Danjen Kopassus (1996-1998)",
+                    "Panglima Kostrad (1998)",
+                    "Ketua Umum Partai Gerindra"
+                ]
+            },
+            "calonwakil": {
+                "nama": "SANDIAGA SALAHUDDIN UNO, MBA",
+                "foto": "../resources/webp/foto/sandi.webp",
+                "tanggallahir": "28 Juni 1969",
+                "tempatlahir": "Pekanbaru",
+                "partaiasal": {
+                    "namapartai": "Independen",
+                    "gambarpartai": "../resources/webp/partai/independen.webp"
+                },
+                "sorotan": [
+                    "Wakil Gubernur Jakarta (2017-2018) ",
+                    "Mendirikan PT Saratoga Investama Sedaya, April 1998",
+                    "Penghargaan - Indonesian Entrepreneur of the Year, 2008"
+                ]
+            }
+        }
+    ]
+}
