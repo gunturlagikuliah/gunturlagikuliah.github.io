@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=1024" initial-scale=1.0 maximum-scale=1.0, user-scalable=0>
+  <script async src="./libs/offline/script/es-module-shims.js"></script>
+  <script type="importmap">
+		{
+			"imports": {
+        "three": "./libs/offline/script/threejs/three.module.js",
+        "three/addons/": "./libs/offline/script/threejs/jsm/",
+        "mindar-image-three":"./libs/offline/script/mindar/mindar-image-three.prod.js"
+			}
+		}
+		</script>
+  <script src="./main.js" type="module"></script>
+  <link rel="stylesheet" href="./libs/offline/css/chota.min.css">
+  <link rel="stylesheet" href="./libs/offline/css/animate.min.css">
+  <link rel='stylesheet' href='./libs/offline/font/fontaleo.css'>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+  </style>
+</head>
+
+<body>
+  <!-- Halaman Pemindaian -->
+  <div id="scanning" class="hidden animate__animated animate__fadeIn  animate__faster">
+    <div class="inner">
+      <img src="./resources/webp/Dummy.webp" />
+      <div class="scanline"></div>
+      <div class="petunjuk text-center">
+        Arahkan kamera ke <br>poster calon kepala daerah!
+      </div>
+    </div>
+  </div>
+
+  <!-- Tombol navigasi  -->
+  <div id="navigasi" class="hidden animate__animated animate__fadeIn  animate__faster">
+    <!-- Icon logo -->
+    <div class="is-left iconlogo">
+      <img id="iconlogo">
+    </div>
+    <!-- Tombol Close -->
+    <div id="tombolclose" class="is-right">
+      <button id="videoprofil" type="button" class="button"
+        onclick="document.getElementById('navigasi').style.display='none'" style="font-size: 300%;">
+        &times;
+      </button>
+    </div>
+    <!-- Menu -->
+    <div class="row" style="height: 50%;">
+      <div class="col-6 borderhitam is-center">
+        <button id="videoprofil" type="button" class="button icon is-full-width is-center tombol jaraktombolkiri"
+          onclick="tutupPopUp();document.getElementById('popupyt').style.display='block';
+          ">
+          Video Profil&nbsp;
+          <img src="https://icongr.am/entypo/video.svg?size=128&color=3f4144" alt="icon">
+        </button>
+      </div>
+      <div class="col bordermerah is-center">
+        <button type="button" class="button icon is-full-width is-center tombol jaraktombolkanan"
+          onclick="tutupPopUp();document.getElementById('popupbiodata').style.display='block'">
+          Profil Personal&nbsp;
+          <img src="https://icongr.am/entypo/v-card.svg?size=128&color=3f4144" alt="icon">
+        </button>
+      </div>
+    </div>
+    <div class="row" style="height: 50%;">
+      <div class="col-6 borderhitam is-center">
+        <a href="#" target="_blank" id="situsresmi" type="button"
+          class="button icon is-full-width is-center tombol jaraktombolkiri">
+          Situs Resmi&nbsp;
+          <img src="https://icongr.am/entypo/globe.svg?size=128&color=3f4144" alt="icon">
+        </a>
+      </div>
+      <div class="col bordermerah is-center">
+        <button type="button" class="button icon is-full-width is-center tombol jaraktombolkanan"
+          onclick="tutupPopUp();document.getElementById('popupvisimisi').style.display='block' ">Visi & Misi&nbsp;
+          <img src="https://icongr.am/fontawesome/lightbulb-o.svg?size=128&color=3f4144" alt="icon">
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Tombol Navigasi End -->
+
+
+  <!-- Plane Yang Merekat Pada Marker -->
+  <div id="container">
+  </div>
+  <div id="plane" class="borderhijau is-center">
+
+    <!-- Logo -->
+    <div class="is-center">
+      <img id="logocalon" class="logocalon" src="">
+    </div>
+
+    <!-- Slideshow -->
+
+  </div>
+
+
+
+  <!-- POP UP VISI MISI -->
+  <div id="popupvisimisi" class="popup">
+    <!-- The pop-up content -->
+    <div class="popup-content ">
+      <button class="close" onclick="document.getElementById('popupvisimisi').style.display='none' ">&times;</button>
+      <br>
+      <div class="popup-scroll">
+        <h4 class="text-center">VISI</h4>
+        <p id="visi" class="text-justify">
+        </p>
+        <h4 class="text-center">MISI</h4>
+        <ol id="misi" class="text-justify">
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- POP UP Youtube -->
+  <div id="popupyt" class="popup">
+    <!-- The pop-up content -->
+    <div class="popup-content">
+      <button class="close" onclick="tutupPopUp();">&times;</button>
+      <br>
+      <div class="popup-scroll">
+        <!-- Youtube -->
+        <div class="is-center">
+          <iframe id="youtube" class="is-full-width" height="1500" src="https://www.youtube.com/embed/" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KALAU BUREM GARA2 DUA CALON -->
+  <!-- POP UP BIODATA -->
+  <div id="popupbiodata" class="popup">
+    <!-- The pop-up content -->
+    <div class="popup-content ">
+      <button class="close" onclick="document.getElementById('popupbiodata').style.display='none' ">&times;</button>
+      <br>
+      <div class="popup-scroll">
+        <h4 id="nomorkepala" class="text-center text-bold"></h4>
+        <div class="is-center">
+          <img id="fotocalonkepala" class="foto" src="" alt="">
+        </div>
+        <h4 id="namakepala" class="text-center"></h4>
+        <div id="ttlkepala" class="text-center">
+          <br>
+        </div>
+        <div class="is-center">
+          <img id="fotopartaikepala" class="fotopartai" src="">
+        </div>
+        <br>
+        <h4 class="text-center">SOROTAN UTAMA</h4>
+        <ol id="sorotankepala" class="text-justify" style="position: relative; margin-left: 10%;">
+        </ol>
+        <h4 id="nomorwakil" class="text-center text-bold"><b></b></h4>
+        <div class="is-center">
+          <img id="fotocalonwakil" class="foto" src="" alt="">
+        </div>
+        <h4 id="namawakil" class="text-center"></h4>
+        <div id="ttlwakil" class="text-center">
+        </div>
+        <div class="is-center">
+          <img id="fotopartaiwakil" class="fotopartai" src="">
+        </div>
+        <br>
+        <h4 class="text-center">SOROTAN UTAMA</h4>
+        <ol id="sorotanwakil" class="text-justify" style="position: relative; margin-left: 10%;">
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</body>
+
+<script>
+  function tutupPopUp() {
+    for (let i = 0; i < document.getElementsByClassName('popup').length; i++) {
+      document.getElementsByClassName('popup')[i].style.display = 'none';
+    }
+    // PAUSE VIDEO YOUTUBE
+    if (document.getElementById('youtube')) {
+      document.getElementById('youtube').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');    // }
+    }
+  }
+</script>
+
+</html>
