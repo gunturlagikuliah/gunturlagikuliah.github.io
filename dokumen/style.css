@@ -75,6 +75,17 @@
 	}
 }
 
+.petunjuk {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.3);
+	color: white;
+	font-size: 6ex;
+	top: -35%;
+	padding: 20px;
+	border-radius: 4%;
+
+}
+
 /* CONTAINER AR */
 html,
 body {
@@ -164,6 +175,7 @@ body {
 	height: 80px;
 }
 
+/* NAVIGASI MENU */
 #navigasi {
 	position: fixed;
 	right: 0;
@@ -185,15 +197,4 @@ body {
 
 .jaraktombolkanan {
 	margin-left: 25%;
-}
-
-.petunjuk {
-	position: absolute;
-	background-color: rgba(0, 0, 0, 0.3);
-	color: white;
-	font-size: 6ex;
-	top: -35%;
-	padding: 20px;
-	border-radius: 4%;
-
 }
