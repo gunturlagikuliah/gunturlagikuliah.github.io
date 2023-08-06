@@ -1,12 +1,9 @@
 import { MindARThree } from 'mindar-image-three';
-// import { mockWithVideo } from './container-mock.js';
 import { CSS3DObject } from 'three/addons/renderers/CSS3DRenderer.js';
 import data from './data.json' assert {type: "json"};
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
-        // mockWithVideo('./semhas/ignore/pasangan0.mp4');
-        // mockWithVideo('./demo/calon2.mp4');
         const mindarThree = new MindARThree({
             container: document.body,
             uiScanning: '#scanning',
@@ -71,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('sorotanwakil').innerHTML += `<li>${dataCalon.calonwakil.sorotan[j]}</li>`
                 }
 
+                //Memasang Objec3D pada Marker
                 anchor[i].group.add(pageObject);
             }
             anchor[i].onTargetLost = () => {
@@ -84,5 +82,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     start();
-
 });

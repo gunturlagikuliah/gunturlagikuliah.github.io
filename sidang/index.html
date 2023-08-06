@@ -17,13 +17,143 @@
   <link rel="stylesheet" href="./libs/offline/css/chota.min.css">
   <link rel="stylesheet" href="./libs/offline/css/animate.min.css">
   <link rel='stylesheet' href='./libs/offline/font/fontaleo.css'>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./scan.css">
   <style>
+    html,
+    body {
+      position: relative;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Aleo';
+    }
+
+
+    #container {
+      width: 1000px;
+      height: 1000px;
+    }
+
+    #plane {
+      width: 950px;
+      height: 950px;
+      visibility: hidden;
+    }
+
+    .gambarfill {
+      width: 1500px;
+      height: 1100px;
+      object-fit: contain;
+    }
+
+    /* Style for the pop-up container */
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 3;
+      /* KARENA UI SCANNYA DI INDEX 2 */
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: none;
+      background-color: rgba(0, 0, 0, 0.4);
+      font-size: 300%;
+      padding-bottom: 30%;
+    }
+
+    /* Style for the pop-up content */
+    .popup-content {
+      background-color: rgba(0, 0, 0, 0.85);
+      color: white;
+      margin: 5% auto;
+      padding: 50px;
+      border: 1px solid #888;
+      width: 90%;
+      height: 90%;
+      overflow-y: scroll;
+      border-radius: 2%;
+    }
+
+    .popup-scroll {
+      padding-top: 5%;
+    }
+
+    /* Style for the close button */
+    .close {
+      color: #000000;
+      font-size: 200%;
+      font-weight: bold;
+      position: absolute;
+      right: 9%;
+    }
+
+    .foto {
+      border-radius: 30%;
+      width: 700px;
+      height: 700px;
+      object-fit: cover;
+    }
+
+    .fotopartai {
+      object-fit: contain;
+      height: 500px;
+    }
+
+    .logocalon {
+      object-fit: contain;
+      height: 500px;
+    }
+
+    #navigasi {
+      position: fixed;
+      right: 0;
+      left: 0;
+      bottom: 2%;
+      z-index: 5;
+      display: none;
+    }
+
+    .tombol {
+      font-size: 250%;
+      height: 100%;
+      background-color: #E9EDC9;
+    }
+
+    .jaraktombolkiri {
+      margin-right: 25%;
+    }
+
+    .jaraktombolkanan {
+      margin-left: 25%;
+    }
+
+    .petunjuk {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: white;
+      font-size: 6ex;
+      top: -35%;
+      padding: 20px;
+      border-radius: 4%;
+
+    }
+
+    .iconlogo {
+      position: absolute;
+      top: -5%
+    }
+
+    #iconlogo {
+      object-fit: contain;
+      height: 80px;
+    }
   </style>
 </head>
 
 <body>
-  <!-- Halaman Pemindaian -->
+  <!-- Halaman Scanning -->
   <div id="scanning" class="hidden animate__animated animate__fadeIn  animate__faster">
     <div class="inner">
       <img src="./resources/webp/Dummy.webp" />
@@ -83,13 +213,22 @@
   </div>
   <!-- Tombol Navigasi End -->
 
+
   <!-- Plane Yang Merekat Pada Marker -->
+  <div id="container">
+  </div>
   <div id="plane" class="borderhijau is-center">
+
     <!-- Logo -->
     <div class="is-center">
       <img id="logocalon" class="logocalon" src="">
     </div>
+
+    <!-- Slideshow -->
+
   </div>
+
+
 
   <!-- POP UP VISI MISI -->
   <div id="popupvisimisi" class="popup">
@@ -125,6 +264,7 @@
     </div>
   </div>
 
+  <!-- KALAU BUREM GARA2 DUA CALON -->
   <!-- POP UP BIODATA -->
   <div id="popupbiodata" class="popup">
     <!-- The pop-up content -->
@@ -169,7 +309,6 @@
 </body>
 
 <script>
-  //Tutup PopUp
   function tutupPopUp() {
     for (let i = 0; i < document.getElementsByClassName('popup').length; i++) {
       document.getElementsByClassName('popup')[i].style.display = 'none';
@@ -180,4 +319,5 @@
     }
   }
 </script>
+
 </html>
