@@ -1,11 +1,11 @@
 import { MindARThree } from 'mindar-image-three';
-// import { mockWithVideo } from './container-mock.js';
+import { mockWithVideo } from './container-mock.js';
 import { CSS3DObject } from 'three/addons/renderers/CSS3DRenderer.js';
 import data from './data.json' assert {type: "json"};
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
-        // mockWithVideo('./semhas/ignore/pasangan0.mp4');
+        mockWithVideo('./semhas/ignore/gubernur.mp4');
         // mockWithVideo('./demo/calon2.mp4');
         const mindarThree = new MindARThree({
             container: document.body,
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 // CALON KEPALA
-                document.getElementById('nomorkepala').innerHTML = `<b>CALON GUBERNUR DKI NO. 0${i + 2}</b>`;
+                document.getElementById('nomorkepala').innerHTML = `<b>CALON PRESIDEN RI NO. 0${i + 1}</b>`;
                 document.getElementById('fotocalonkepala').src = dataCalon.calonkepala.foto;
                 document.getElementById('namakepala').innerHTML = dataCalon.calonkepala.nama;
                 document.getElementById('ttlkepala').innerHTML = `${dataCalon.calonkepala.tempatlahir}, ${dataCalon.calonkepala.tanggallahir}`;
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 // CALON WAKIL
-                document.getElementById('nomorwakil').innerHTML = `<b>CALON WAKIL GUBERNUR DKI NO. 0${i + 2}</b>`;
+                document.getElementById('nomorwakil').innerHTML = `<b>CALON WAKIL PRESIDEN RI NO. 0${i + 1}</b>`;
                 document.getElementById('fotocalonwakil').src = dataCalon.calonwakil.foto;
                 document.getElementById('namawakil').innerHTML = dataCalon.calonwakil.nama;
                 document.getElementById('ttlwakil').innerHTML = `${dataCalon.calonwakil.tempatlahir}, ${dataCalon.calonwakil.tanggallahir}`;
