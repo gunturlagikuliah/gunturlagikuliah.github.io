@@ -1,7 +1,100 @@
 import { MindARThree } from 'mindar-image-three';
 // import { mockWithVideo } from './container-mock.js';
 import { CSS3DObject } from 'three/addons/renderers/CSS3DRenderer.js';
-import data from './data.json' assert {type: "json"};
+// import data from './data.json' assert {type: "json"};
+// Data Embed
+const data = {
+    "mindtarget": "./marker/gubtargets.mind",
+    "calon": [
+        {
+            "visi": "JAKARTA sebagai etalase kota Indonesia yang modern, tertata rapi, manusiawi, dan fokus pada pembangunan manusia seutuhnya  dengan kepemimpinan yang bersih , transparan, dan profesional.",
+            "misi": [
+                "Mewujudkan pemerintahan yang bebas korupsi, kolusi, dan nepotisme (KKN), terbuka, dan melayani warga.",
+                "Menjamin terpenuhinya kebutuhan dasar warga, yaitu jaminan kesehatan, jaminan pendidikan, hunian yang layak, bahan pangan yang terjangkau, transportasi publik yang ekonomis, dan lapangan pekerjaan serta usaha agar seluruh warga berkesempatan memperoleh kehidupan yang lebih baik sehingga Indeks Kebahagiaan kota Jakarta menjadi salah satu yang tertinggi di antara kota-kota di dunia.",
+                "Menciptakan sumber daya manusia yang tangguh lahir dan batin, kompeten, dan berdaya saing global dengan Indeks Pembangunan Manusia yang setara dengan kota-kota maju di dunia.",
+                "Menata kota sesuai perubahan zaman untuk mendukung kemajuan ekonomi, keberlangsungan lingkungan, dan kehidupan sosial budaya warga.",
+                "Membangun kehidupan kota yang berbasis teknologi dan berinfrastruktur kelas dunia dengan warga yang berketuhanan, berbudaya, bergotong royong, berwawasan, toleran, partisipatif, dan inovatif."
+            ],
+            "youtube": "https://www.youtube.com/watch?v=mkDqU6xLODI",
+            "web": "https://ahok.org/tentang-ahok/visi-misi-program-kerja-ahok-djarot/",
+            "logokampanye": "./resources/webp/logocalongub1.webp",
+            "calonkepala": {
+                "nama": "Ir. Basuki Tjahaja Purnama, M.M.",
+                "foto": "./resources/webp/foto/ahok.webp",
+                "tanggallahir": "29 Juni 1966",
+                "tempatlahir": "Manggar",
+                "partaiasal": {
+                    "namapartai": "Independen",
+                    "gambarpartai": "./resources/webp/partai/independen.webp"
+                },
+                "sorotan": [
+                    "Gubernur Jakarta (2014-2017)",
+                    "DPR RI (2009-2014)",
+                    "DPRD Belitung (2004-2009)"
+                ]
+            },
+            "calonwakil": {
+                "nama": "Drs. H. Djarot Saiful Hidayat, M.S.",
+                "foto": "./resources/webp/foto/djarot.webp",
+                "tanggallahir": "06 Juli 1962",
+                "tempatlahir": "Magelang",
+                "partaiasal": {
+                    "namapartai": "PDIP",
+                    "gambarpartai": "./resources/webp/partai/pdip.webp"
+                },
+                "sorotan": [
+                    "Wakil Gubernur Jakarta (2014-2017) ",
+                    "DPR RI (2010-2014) ",
+                    "Walikota Blitar (2000-2010)"
+                ]
+            }
+        },
+        {
+            "visi": "Jakarta kota maju, lestari dan berbudaya yang warganya terlibat dalam mewujudkan keberadaban, keadilan, dan kesejahteraan bagi semua",
+            "misi": [
+                "Menjadikan Jakarta kota aman, sehat, cerdas, berbudaya, dengan memperkuat nilai-nilai keluarga dan memeberikan ruang kreativitas melalui kepemimpinan yang melibatkan, menggerakan dan memanusiakan. ",
+                "Menjadikan Jakarta kota memajukan kesejahteraan umum melalui terciptanya lapangan kerja, kestabilan dan keterjangkauan kebutuhan pokok, meningkatnya keadilan sosial, percepatan pembangunan infrastruktur, kemudahan investasi dan berbisnis, serta perbaikan pengolaan tata ruang.",
+                "Menjadikan Jakarta tempat wahana aparatur negara yang berkarya , mengabdi dan melayani, serta menyelesaikan berbagai permasalahan kota dan warga, secara efektif, meritokratis, dan berintergritas.",
+                "Menjadikan Jakarta kota yang lestari, dengan pembangunan dan tata kehidupan yang memperkuat daya dukung lingkungan dan sosial.",
+                "Menjadikan Jakarta ibu kota yang dinamis sebagai simpul kemajuan Indonesia yang bercirikan keadilan, kebangsaan dan kebhinekaan."
+
+            ],
+            "youtube": "https://www.youtube.com/watch?v=fqnrC3Wjauk",
+            "web": "https://jakartamajubersama.com/",
+            "logokampanye": "./resources/webp/logocalongub2.webp",
+            "calonkepala": {
+                "nama": "Anies Rasyid Baswedan, Ph.D.",
+                "foto": "./resources/webp/foto/anies.webp",
+                "tanggallahir": "07 Mei 1969",
+                "tempatlahir": "Kuningan",
+                "partaiasal": {
+                    "namapartai": "Independen",
+                    "gambarpartai": "./resources/webp/partai/independen.webp"
+                },
+                "sorotan": [
+                    "Pendiri dan ketua yayasan Indonesia Mengajar (2010)",
+                    "Menteri pendidikan dan kebudayaan RI (2014-2016)",
+                    "Rektor Universitas Paramadina (2007-2014)"
+                ]
+            },
+            "calonwakil": {
+                "nama": "Sandiaga Salahuddin Uno, MBA",
+                "foto": "./resources/webp/foto/sandi.webp",
+                "tanggallahir": "28 Juni 1969",
+                "tempatlahir": "Pekanbaru",
+                "partaiasal": {
+                    "namapartai": "Gerindra",
+                    "gambarpartai": "./resources/webp/partai/gerindra.webp"
+                },
+                "sorotan": [
+                    "Mendirikan PT Recapital Advisors (1997)",
+                    "Mendirikan PT Saratoga Investama Sedaya (1998)",
+                    "Penghargaan - Indonesian Entrepreneur of the Year (2008)"
+                ]
+            }
+        }
+    ]
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     const start = async () => {
